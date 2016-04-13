@@ -121,12 +121,11 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	padding-left: 20px;
 	padding-right: 20px;
 }
-#top .top-navbar .navbar ul .active{
+#top .top-navbar .navbar ul li a:hover{
 	color: #fff;
 	background-color: #50bbdb;
 	border-bottom: 1px solid #7d7a79;
 }
-
 
 
 #footer{

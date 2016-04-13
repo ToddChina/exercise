@@ -6,24 +6,12 @@
 <title>自驾团页面</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
-<script type="text/javascript" src="script/jquery-1.12.0.min.js"></script>
-<script type="text/javascript" src="script/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="script/jquery.cycle.all.js"></script>
-
-<script type="text/javascript">
-	$(".banner-pic").cycle({
-		before:function(){
-			var index = $(this).index();
-			$(".banner-one-pic2 li").eq(index).css({"background-color":"#50bbdb","width":"22px","height":"22px"}).siblings().css({"background-color":"#fff","width":"20px","height":"20px"})
-
-		}
-	})
-</script>
 <link href="style/tourism/tourism.css" rel="stylesheet">
 </head>
 <body>
 	<div id="header">
-		<div id="top">
+		<div id="header-top">
+			<div id="top">
 			<div class="top-nav">
 				<ul class="nav-list-1">
 					<li class="list-1"><a href="#"><img src="images/tourism/nav-location.png" alt="location"></a></li>
@@ -58,6 +46,7 @@
 					</ul>
 				</div>
 			</div>
+		</div>
 		</div>
 		<div class="clear"></div>
 		<div class="banner">
@@ -109,7 +98,7 @@
 				<ul>
 					<li class="first-word-one">境内</li>
 					<li class="first-word-two">Territory</li>
-					<li class="first-word-three"><a href="#">更多>></a></li>
+					<li class="first-word-three"><a href="domestic-list.html">更多>></a></li>
 					<!-- 链接 -->
 				</ul>
 				<hr>
@@ -119,7 +108,7 @@
 					<div class="first-pic-one-1">
 						<div class="first-pic-one-1-1">
 							<ul class="container-top">
-								<li>云南落地自驾行摄之旅</li>
+								<li><a href="details.html">云南落地自驾行摄之旅</a></li>
 							</ul>
 						</div>
 						<div class="container-start">
@@ -137,7 +126,7 @@
 								</ul>
 							</div>
 							<div class="container-bottom">
-								<p class="container-add">中国自驾游联盟南京站</p>
+								<p class="container-add"><a href="leader.html">中国自驾游联盟南京站</a></p>
 								<ul class="container-review">
 									<li class="container-browes">36</li>
 									<li class="container-laud">0</li>
@@ -311,10 +300,10 @@
 							<div  class="container-center">
 								<ul>
 									<li class="container-city">北京一长白山一敦化一雪乡一哈尔滨</li>
-									<li class="container-word">梦幻如雪 , 北国神话。</li>
+									<li class="container-word">梦幻如雪 , 北国神话<span>。</span></li>
 								</ul>
 							</div>
-							<div class="c">
+							<div class="container-bottom">
 								<p class="container-add">北京969汽车俱乐部</p>
 								<ul class="container-review">
 									<li class="container-browes">36</li>
@@ -340,7 +329,7 @@
 							<div class="container-center">
 								<ul>
 									<li class="container-city">北京一松原市一雾凇岛一雪谷一雪乡</li>
-									<li class="container-word">体验如同童话世界一样的美景。</li>
+									<li class="container-word">体验如同童话世界一样的美景<span>。</span></li>
 								</ul>
 							</div>
 							<div class="container-bottom">
@@ -389,7 +378,7 @@
 				<ul>
 					<li class="first-word-one">境外</li>
 					<li class="first-word-two">Abroad</li>
-					<li class="first-word-three"><a href="#">更多>></a></li>       <!-- 链接 -->
+					<li class="first-word-three"><a href="other-search.html">更多>></a></li>       <!-- 链接 -->
 				</ul>
 				<hr>
 			</div>
@@ -412,7 +401,7 @@
 							<div class="container-center">
 								<ul>
 									<li class="container-city">墨尔本一大洋路一堪培拉一悉尼</li>
-									<li class="container-word">大洋路深度探索野性澳洲风情。</li>
+									<li class="container-word">大洋路深度探索野性澳洲风情<span>。</span></li>
 								</ul>
 							</div>
 							<div class="container-bottom">
@@ -441,7 +430,7 @@
 							<div class="container-center">
 								<ul>
 									<li class="container-city">奥克兰一皇后镇一蒂阿瑙一基督城</li>
-									<li class="container-word">长白云之乡、地球上最后一片净土。</li>
+									<li class="container-word">长白云之乡、地球上最后一片净土<span>。</span></li>
 								</ul>
 							</div>
 							<div class="container-bottom">
@@ -470,7 +459,7 @@
 							<div class="container-center">
 								<ul>
 									<li class="container-city">重庆一金边一西哈努克港一暹粒</li>
-									<li class="container-word">柬埔寨金边暹粒西港自驾之旅。</li>
+									<li class="container-word">柬埔寨金边暹粒西港自驾之旅<span>。</span></li>
 								</ul>
 							</div>
 							<div class="container-bottom">
@@ -530,7 +519,7 @@
 							<div class="container-center">
 								<ul>
 									<li class="container-city">上海一墨尔本一莫宁顿半岛一华南府</li>
-									<li class="container-word">饱览大自然美景 , 感受澳洲人的活力和闲适。</li>
+									<li class="container-word">饱览大自然美景 , 感受澳洲人的活力和闲适<span>。</span></li>
 								</ul>
 							</div>
 							<div class="container-bottom">
@@ -592,5 +581,34 @@
 			<span>开发团队 排雷组</span>
 		</div>
 	</div>
+	<script type="text/javascript" src="script/jquery-1.12.0.min.js"></script>
+	<script type="text/javascript" src="script/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="script/jquery.cycle.all.js"></script>
+	<script type="text/javascript">
+	// 图片轮播
+		$(".banner-pic").cycle({
+			before:function(){
+				var index = $(this).index();
+				$(".banner-one-pic2 li").eq(index).css({"background-color":"#50bbdb","width":"22px","height":"22px"}).siblings().css({"background-color":"#fff","width":"20px","height":"20px"})
+			}
+		})
+		// 点击加
+		$(".container-browes").click(function(){
+			var num = $(this).text();
+			if(num==36){
+				$(this).text(37);
+			}else if(num==37){
+				$(this).text(36);
+			}
+		});
+		$(".container-laud").click(function(){
+			var num = $(this).text();
+			if(num==0){
+				$(this).text(1).css("background-image","url(images/1.png)");
+			}else if(num==1){
+				$(this).text(0).css("background-image","url(images/2.png)");
+			}
+		});
+	</script>
 </body>
 </html>

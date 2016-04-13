@@ -510,6 +510,26 @@ a,p,h1,h2,h3,h4,h5,h6,span,ul,li,div,input,button{
 	color: #333333;
 	font-size: 16px;
 }
+#center .body-center{
+	width: 945px;
+	background-image: url(../../images/details/102.png);
+	background-repeat: no-repeat;
+	margin-left: 35px;
+	margin-top: 60px;
+}
+#center .body-center p{
+	font-size: 16px;
+	color: #fff;
+	width: 125px;
+	height: 28px;
+	text-align: center;
+	line-height: 28px;
+}
+
+
+
+
+
 
 
 

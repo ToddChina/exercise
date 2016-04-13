@@ -7,7 +7,7 @@ jQuery(document).ready(function(){
 		var onshow=$(this).text();
 		$("#content-show-input input").val(onshow);
 	})
-	$(".content-last-nav li").mouseenter(function(){
+	$(".number").mouseenter(function(){
 		$(this).css("cursor","pointer");
 	}).click(function(){
 		$(this).css({"background-color":"#50bbdb","color":"#fff"}).siblings().css({"background-color":"#d6d6d6","color":"#000"})
@@ -28,11 +28,68 @@ jQuery(document).ready(function(){
 	}).mouseleave(function(){
 		$(this).find("span").css("color","#c9c9c9");
 		$(".onlyspan").css("color","#000");
-	}).click(function(){
-		var str=$(this).find("span").eq(0).text();
-		if(str=="价格"){
-			console.log(1);
-		}
 	})
+	$("#next").mouseenter(function(){
+		$(this).css("cursor","pointer");
+	})
+	$("#prev").mouseenter(function(){
+		$(this).css("cursor","pointer");
+	})
+	$(".number").click(function(){
+		var n=$(this).index();
+		$("#next").click(function(){
+			$(".content-last-nav li").eq(n).next().css({"background-color":"#50bbdb","color":"#fff"})
+			.siblings().css({"background-color":"#d6d6d6","color":"#000"});
+			if(n<8){
+				n++;
+			}	
+			if(n==4){
+				var distance=n*-49;	
+				$(".content-last-nav").css("margin-left",distance);
+			}else if(n==8){
+				var distance=n*-49;
+				$(".content-last-nav").css("margin-left",distance);
+			}
+		})
+	})
+
+	var i=0;
+	$("#next").click(function(){
+		$(".content-last-nav li").eq(i).next().css({"background-color":"#50bbdb","color":"#fff"})
+		.siblings().css({"background-color":"#d6d6d6","color":"#000"});
+		if(i<8){
+			i++;
+		}	
+		if(i==4){
+			var distance=i*-49;	
+			$(".content-last-nav").css("margin-left",distance);
+		}else if(i==8){
+			var distance=i*-49;
+			$(".content-last-nav").css("margin-left",distance);
+		}	
+		
+	})
+
+
+	// $(".number").click(function(){
+	// 	var n=$(this).index();
+	// 	$("#prev").click(function(){
+	// 	// if(n>5){
+	// 	// 	n++;
+	// 	// }		
+	// 	// var distance=n*49;	
+	// 	$(".content-last-nav li").eq(n-1).css({"background-color":"#50bbdb","color":"#fff"}).siblings
+	// 	().css({"background-color":"#d6d6d6","color":"#000"})
+	// 	// $(".content-last-nav").css("margin-left",distance);
+	// 	})
+	// })
+	// $("#prev").click(function(){
+	// 	// if(i<8){
+	// 	// 	i++;
+	// 	// }		
+	// 	// var distance=i*-49;	
+	// 	$(".content-last-nav li").eq(i-1).css({"background-color":"#50bbdb","color":"#fff"})
+	// 	// $(".content-last-nav").css("margin-left",distance);
+	// })
 
 })

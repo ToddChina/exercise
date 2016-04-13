@@ -24,14 +24,37 @@ font-family: jWaWAZuan;  src:url(../../fonts/wawati.ttf);
 	height: 1000px;
 	margin-left: 500px;
 }
-.motai-logo{
+#myModa2{
+	width: 500px;
+	height: 1000px;
+	margin-left: 500px;
+	margin-top: -25px;
+}
+#myModal .modal-content{
+	height: 550px;
+}
+#myModal .modal-content .motai-logo{
 	margin-left: 140px;
 	margin-top: 10px;
 }
-.motai-p{
+#myModa2 .modal-content{
+	height: 850px;
+}
+#myModa2 .modal-content .motai-logo{
+	margin-left: 140px;
+	margin-top: 10px;
+}
+.modal-header a{
+	margin-left: -135px;
+	position: relative;top: 70px;
+}
+#myModal .modal-content .motai-p{
 	float: right;
 	margin-right: 50px;
 	margin-top: 80px;
+}
+.modal-body{
+	margin-top: 15px;
 }
 .motai-input{
 	height: 55px;
@@ -45,8 +68,27 @@ font-family: jWaWAZuan;  src:url(../../fonts/wawati.ttf);
 	height: 48px;
 	width: 353px;
 }
+#myModa2 .motai-zhuce{
+	margin-left: 235px;
+	position: relative;top: -35px;
+	left: 55px;
+	height: 40px;
+	width: 120px;
+}
+#myModa2 .modal-body p{
+	margin-left: 54px;
+	margin-top: 25px;
+	font-size: 12px;
+}
+#myModa2 .modal-body p span{
+	color: #b4b4b4;
+	font-size: 12px;
+}
 .motai-denglu-go{
 	font-size: 24px;
+}
+.motai-zhuce-go{
+	font-size: 14px;
 }
 .motai-font1{
 	position: relative;top: 30px;left: 55px;
@@ -62,6 +104,19 @@ font-family: jWaWAZuan;  src:url(../../fonts/wawati.ttf);
 	margin-left: 190px;
 	margin-top: -12px;
 }
+#myModa2 .hengxian1{
+	margin-top: 10px;
+	height: 2px;
+}
+#myModa2 .motai-font4{
+	position: relative;top: -35px;
+	left: 143px;
+	color: #b4b4b4;
+}
+#myModa2 .hengxian2{
+	margin-top: -55px;
+	height: 2px;
+}
 .motai-hengxian{
 	height: 3px;
 	width: 134px;
@@ -74,7 +129,7 @@ font-family: jWaWAZuan;  src:url(../../fonts/wawati.ttf);
 	margin-left: 277px;margin-top:-22px;
 }
 .motai-false{
-	margin-left: 140px;
+	margin-left: 130px;
 	margin-top: -60px;
 }
 .motai-straight{
@@ -87,6 +142,9 @@ font-family: jWaWAZuan;  src:url(../../fonts/wawati.ttf);
 .motai-straight-p{
 	font-size: 18px;
 	font-family: MicrosoftYaHei-Regular;
+}
+#myModa2 .motai-straight{
+	margin-top: -10px;
 }
 
 
@@ -527,12 +585,32 @@ font-family: jWaWAZuan;  src:url(../../fonts/wawati.ttf);
 .content-end6{
 	position: relative;top: 50px;
 }
-.content-last-nav{
-	float: left;
-	margin-top: 60px;
-	margin-left: 1020px;
+.content-last{
+	width: 379px;
 	height: 36px;
-	width: 395px;
+	position: absolute;left: 1020px;
+	top: 3460px;
+}
+.content-last span{
+	list-style: none;
+	float: left;
+	height: 36px;
+	width: 36px;
+	margin-left: 13px;
+	border: 1px solid #d6d6d6;
+	font-size: 16px;
+	text-align: center;
+	line-height: 36px;
+	font-family: MicrosoftYaHei-Regular-bd;
+	background-color: #d6d6d6;
+}
+.content-last-float{
+	float: left;
+	height: 36px;
+	width: 209px;
+	margin-left: 100px;
+	margin-top: -36px;
+	overflow: hidden;
 }
 .content-last-nav li{
 	list-style: none;
@@ -546,6 +624,24 @@ font-family: jWaWAZuan;  src:url(../../fonts/wawati.ttf);
 	line-height: 36px;
 	font-family: MicrosoftYaHei-Regular-bd;
 	background-color: #d6d6d6;
+}
+#pprev{
+	margin-top: 10px;
+}
+#prev{
+	margin-top: 10px;
+}
+#next{
+	margin-top: -36px;
+	margin-left: 310px;
+}
+#nnext{
+	margin-top: -36px;
+	margin-left: 359px;
+}
+.content-last-nav .number-bule{
+	color: #fff;
+	background-color: #50bbdb;
 }
 
 

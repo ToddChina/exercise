@@ -21,14 +21,45 @@
 	      	<button type="button" class="label label-info motai-denglu"><span class="motai-denglu-go">登录</span></button>
 	      	<div>
 	      		<a href="" class="motai-font1"><p>忘记密码</p></a>
-	      		<p class="motai-font2">还没有账号?</p><a href=""><span class="motai-font3">免费注册</span></a>
+	      		<p class="motai-font2">还没有账号?</p><a href="#myModa2" data-toggle="modal" data-dismiss="modal"><span class="motai-font3">免费注册</span></a>
+
 	      	</div>
 	 		<div class="motai-hengxian hengxian1"></div>
 	 		<p class="motai-font4">其他报名方式</p>
 	 		<div class="motai-hengxian hengxian2"></div>
-	      </div>    
+	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="label label-info  motai-straight"><span class="motai-straight-p">不登陆，直接报名</span>></button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
+
+	<div class="modal fade" id="myModa2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+	        <img src="images/motai-logo.jpg" class="motai-logo"alt="">
+	        <img src="images/false.jpg" alt="" class="btn-default motai-false" data-dismiss="modal">
+	        <a href=""><span>用手机注册</span></a>
+	      </div>
+	      <div class="modal-body">
+	      	<input type="text" placeholder="&nbsp 请输入邮箱" class="motai-input">
+	      	<input type="text" placeholder="&nbsp 用户名，4-16个字符，字母/中文/数字" class="motai-input">
+	      	<input type="text" placeholder="&nbsp 设置密码" class="motai-input">
+	      	<input type="text" placeholder="&nbsp 输入密码" class="motai-input">
+	      	<input type="text" placeholder="&nbsp 输入邀请码，可不填" class="motai-input">
+	      	<p><span>注册视为同意</span>《爱自驾用户使用协议》</p>
+	      	<button type="button" class="label label-info motai-zhuce"><span class="motai-zhuce-go">注册</span></button>
+	 		<div class="motai-hengxian hengxian1"></div>
+	 		<p class="motai-font4">其他报名方式</p>
+	 		<div class="motai-hengxian hengxian2"></div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="label label-info  motai-straight"><span class="motai-straight-p">快速登录></span>></button>
 	      </div>
 	    </div>
 	  </div>
@@ -51,7 +82,7 @@
 				<li class="list-2"><a href="#"><img src="images/nav-sina.png"></a></li>
 				<li class="btn  list-3" data-toggle="modal" data-target="#myModal"><a href="#">登录</a></li>
 				<li class="list-4">｜</li>
-				<li class="list-5"><a href="#"> 注册</a></li>
+				<li class="list-5" data-toggle="modal" data-target="#myModa2"><a href="#"> 注册</a></li>
 			</ul>
 		</div>
 		<div class="top-navbar">
@@ -293,7 +324,7 @@
 			<div>
 				<input type="radio" name="bm" value="1" checked /><span class="agree">已阅读爱自驾条款，并同意</span>
 			</div>
-			<span class="label label-info change">确认订单并提交</span>
+			<span class="label label-info change"><a href="online-pay.html">确认订单并提交</a></span>
 		</div>
 	</div>
 

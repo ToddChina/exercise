@@ -6,15 +6,48 @@
 <title>自驾团其他搜索结果页面</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
-<script type="text/javascript" src="script/jquery-1.12.0.min.js"></script>
+
 <script type="text/javascript" src="script/js-wangcanhui/Other-search.js"></script>
+
+<script type="text/javascript" src="script/jquery-1.12.0.min.js"></script>
+
 <script type="text/javascript" src="script/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="script/bootstrap.min.js"></script>
+
+
 
 <link href="style/css-wangcanhui/tourism-top.css" rel="stylesheet">
 <link href="style/css-wangcanhui/Other-search.css" rel="stylesheet">
-<link rel="stylesheet" href="style/bootstrap.css">
+<link rel="stylesheet" href="style/bootstrap.min.css">
 </head>
 <body>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+	        <img src="images/motai-logo.jpg" class="motai-logo"alt="">
+	        <img src="images/false.jpg" alt="" class="btn-default motai-false" data-dismiss="modal">
+	      </div>
+	      <div class="modal-body">
+	      	<input type="text" placeholder="&nbsp; 邮箱/手机/用户名" class="motai-input">
+	      	<input type="text" placeholder="&nbsp; 密码" class="motai-input">
+	      	<button type="button" class="label label-info motai-denglu"><span class="motai-denglu-go">登录</span></button>
+	      	<div>
+	      		<a href="" class="motai-font1"><p>忘记密码</p></a>
+	      		<p class="motai-font2">还没有账号?</p><a href=""><span class="motai-font3">免费注册</span></a>
+	      	</div>
+	 		<div class="motai-hengxian hengxian1"></div>
+	 		<p class="motai-font4">其他报名方式</p>
+	 		<div class="motai-hengxian hengxian2"></div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="label label-info  motai-straight"><span class="motai-straight-p">不登陆，直接报名</span>></button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 	<div id="top">
 
 		<div class="bigtop-nav">
@@ -29,7 +62,7 @@
 			<ul class="nav-list-2">
 				<li class="list-1"><a href="#"><img src="images/img-wangcanhui/nav-qq.png"></a></li>
 				<li class="list-2"><a href="#"><img src="images/img-wangcanhui/nav-sina.png"></a></li>
-				<li class="list-3"><a href="#">登录</a></li>
+				<li class="list-3" data-toggle="modal" data-target="#myModal">><a href="#">登录</a></li>
 				<li class="list-4">｜</li>
 				<li class="list-5"><a href="#"> 注册</a></li>
 			</ul>
@@ -60,11 +93,11 @@
 			<div class="banner-top1">
 				<a href="">首页</a>
 				&nbsp; >&nbsp;
-				<a href="">自驾团</a>
-				&nbsp >&nbsp
-				<a href="exercise/domestic-list.html">自驾团境内</a>
-				&nbsp >&nbsp
-				<a href="">温泉</a>
+				<a href="tourism.html">自驾团</a>
+				&nbsp; >&nbsp;
+				<a href="domestic-list.html">自驾团境内</a>
+				&nbsp; >&nbsp;
+				<a href="other-search.html">温泉</a>
 			</div>
 			<div class="banner-top2">
 				<input type="text" class="banner-input"><a href=""><img src="images/img-wangcanhui/search.jpg" alt=""></a></div>
@@ -195,10 +228,10 @@
 					</ul>
 				</div>
 				<div class="box1"><span>南京—重庆—元阳—泸沽湖</span></div>
-				<div class="box2"><span>不一样的云南发现之旅</span></div>
+				<div class="box2"><span><a href="details.html">不一样的云南发现之旅</a></span></div>
 				<div class="box3">
 						<div class="pic"><img src="images/img-wangcanhui/Other-search-xr.jpg" alt=""></div>
-						<div class="lind"><span><a href="">中国自驾游联盟南京站</a></span></div>
+						<div class="lind"><span><a href="leader.html">中国自驾游联盟南京站</a></span></div>
 						<div class="eye"><img src="images/img-wangcanhui/Other-search-yey.jpg" alt="">36</div>
 						<div class="zan"><img src="images/img-wangcanhui/Other-search-zan.jpg" alt=""><span>    0</span></div>
 				</div>
@@ -218,7 +251,7 @@
 				<div class="box2"><span>海天佛国，南海圣境</span></div>
 				<div class="box3">
 						<div class="pic"><img src="images/img-wangcanhui/Other-search-xr.jpg" alt=""></div>
-						<div class="lind"><span><a href="">中国自驾游联盟南京站</a></span></div>
+						<div class="lind"><span><a href="leader.html">中国自驾游联盟南京站</a></span></div>
 						<div class="eye"><img src="images/img-wangcanhui/Other-search-yey.jpg" alt="">36</div>
 						<div class="zan"><img src="images/img-wangcanhui/Other-search-zan.jpg" alt=""><span>    0</span></div>
 				</div></li>
@@ -238,7 +271,7 @@
 				<div class="box2"><span>尽情领略广西风光，深入体验中越边关风采</span></div>
 				<div class="box3">
 						<div class="pic"><img src="images/img-wangcanhui/Other-search-xr.jpg" alt=""></div>
-						<div class="lind"><span><a href="">中国自驾游联盟南京站</a></span></div>
+						<div class="lind"><span><a href="leader.html">中国自驾游联盟南京站</a></span></div>
 						<div class="eye"><img src="images/img-wangcanhui/Other-search-yey.jpg" alt="">36</div>
 						<div class="zan"><img src="images/img-wangcanhui/Other-search-zan.jpg" alt=""><span>    0</span></div>
 				</div></li>
@@ -260,7 +293,7 @@
 				<div class="box2"><span>壮美东川，光影元阳</span></div>
 				<div class="box3">
 						<div class="pic"><img src="images/img-wangcanhui/Other-search-xr.jpg" alt=""></div>
-						<div class="lind"><span><a href="">中国自驾游联盟南京站</a></span></div>
+						<div class="lind"><span><a href="leader.html">中国自驾游联盟南京站</a></span></div>
 						<div class="eye"><img src="images/img-wangcanhui/Other-search-yey.jpg" alt="">36</div>
 						<div class="zan"><img src="images/img-wangcanhui/Other-search-zan.jpg" alt=""><span>    0</span></div>
 				</div></li>
@@ -279,7 +312,7 @@
 				<div class="box2"><span>返璞归真，回归自然</span></div>
 				<div class="box3">
 						<div class="pic"><img src="images/img-wangcanhui/Other-search-xr.jpg" alt=""></div>
-						<div class="lind"><span><a href="">中国自驾游联盟南京站</a></span></div>
+						<div class="lind"><span><a href="leader.html">中国自驾游联盟南京站</a></span></div>
 						<div class="eye"><img src="images/img-wangcanhui/Other-search-yey.jpg" alt="">36</div>
 						<div class="zan"><img src="images/img-wangcanhui/Other-search-zan.jpg" alt=""><span>    0</span></div>
 				</div></li>
@@ -298,7 +331,7 @@
 				<div class="box2"><span>冰雪盛宴，冬季那达慕</span></div>
 				<div class="box3">
 						<div class="pic"><img src="images/img-wangcanhui/Other-search-xr.jpg" alt=""></div>
-						<div class="lind"><span><a href="">中国自驾游联盟南京站</a></span></div>
+						<div class="lind"><span><a href="leader.html">中国自驾游联盟南京站</a></span></div>
 						<div class="eye"><img src="images/img-wangcanhui/Other-search-yey.jpg" alt="">36</div>
 						<div class="zan"><img src="images/img-wangcanhui/Other-search-zan.jpg" alt=""><span>    0</span></div>
 				</div></li>
@@ -320,7 +353,7 @@
 				<div class="box2"><span>领略岭南风光，品味地道美食</span></div>
 				<div class="box3">
 						<div class="pic"><img src="images/img-wangcanhui/Other-search-xr.jpg" alt=""></div>
-						<div class="lind"><span><a href="">中国自驾游联盟南京站</a></span></div>
+						<div class="lind"><span><a href="leader.html">中国自驾游联盟南京站</a></span></div>
 						<div class="eye"><img src="images/img-wangcanhui/Other-search-yey.jpg" alt="">36</div>
 						<div class="zan"><img src="images/img-wangcanhui/Other-search-zan.jpg" alt=""><span>    0</span></div>
 				</div></li>
@@ -340,7 +373,7 @@
 				<div class="box2"><span>最经典滇西北行程，体验梦中的香格里拉</span></div>
 				<div class="box3">
 						<div class="pic"><img src="images/img-wangcanhui/Other-search-xr.jpg" alt=""></div>
-						<div class="lind"><span><a href="">中国自驾游联盟南京站</a></span></div>
+						<div class="lind"><span><a href="leader.html">中国自驾游联盟南京站</a></span></div>
 						<div class="eye"><img src="images/img-wangcanhui/Other-search-yey.jpg" alt="">36</div>
 						<div class="zan"><img src="images/img-wangcanhui/Other-search-zan.jpg" alt=""><span>    0</span></div>
 				</div></li>
@@ -359,7 +392,7 @@
 				<div class="box2"><span>大理双廊洱海、腾冲银杏</span></div>
 				<div class="box3">
 						<div class="pic"><img src="images/img-wangcanhui/Other-search-xr.jpg" alt=""></div>
-						<div class="lind"><span><a href="">中国自驾游联盟南京站</a></span></div>
+						<div class="lind"><span><a href="leader.html">中国自驾游联盟南京站</a></span></div>
 						<div class="eye"><img src="images/img-wangcanhui/Other-search-yey.jpg" alt="">36</div>
 						<div class="zan"><img src="images/img-wangcanhui/Other-search-zan.jpg" alt=""><span>    0</span></div>
 				</div></li>
