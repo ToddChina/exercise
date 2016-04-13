@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>自驾团页面</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<script type="text/javascript" src="script/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="script/jquery.easing.1.3.js"></script>
+
+<script type="text/javascript" src="script/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="script/bootstrap.js"></script>
+<link href="style/customized/customized.css" rel="stylesheet">
+<link rel="stylesheet" href="style/bootstrap.css">
+</head>
+<body>
+	<div id="top">
+		<div class="top-nav">
+			<ul class="nav-list-1">
+				<li class="list-1"><a href="#"><img src="images/nav-location.png" alt="location"></a></li>
+				<li class="list-2"><a href="#">北京</a></li>
+				<li class="list-3"><a href="#">切换</a></li>
+				<li class="list-4"><a href="#"><img src="images/nav-phone.png" alt="location"></a></li>
+				<li class="list-5"><a href="#">下载手机<span>APP</span></a></li>
+			</ul>
+			<ul class="nav-list-2">
+				<li class="list-1"><a href="#"><img src="images/nav-qq.png"></a></li>
+				<li class="list-2"><a href="#"><img src="images/nav-sina.png"></a></li>
+				<li class="list-3"><a href="#">登录</a></li>
+				<li class="list-4">｜</li>
+				<li class="list-5"><a href="#"> 注册</a></li>
+			</ul>
+		</div>
+		<div class="top-nav-box">
+			<div class="top-navbar">
+				<div class="logo-img">
+					<img src="images/logo.png">
+				</div>
+				<div class="navbar">
+					<ul class="navbar-list">
+						<li><a href="#">首页</a></li>
+						<li><a href="#">目的地</a></li>
+						<li><a href="#">线路</a></li>
+						<li><a href="#">定制</a></li>
+						<li><a href="#">自驾团</a></li>
+						<li><a href="#">摄影</a></li>
+						<li><a href="#">互动</a></li>
+						<li><a href="#">精选</a></li>
+						<li><a href="#">预定</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="banner">
+	</div>
+	<div id="container">
+		<div class="container-top">
+			<img src="images/customized/container-top.jpg" alt="">
+			<div class="container-top-1">
+
+				<span>联系人信息</span><p class="required">（必填）</p>
+
+			</div>
+			<div class="container-top-2">
+				<form action="" id="topForm">
+					<p>
+						<label for="username">姓名</label>
+						<input type="text" id="username" name="username" placeholder="请输入姓名">
+					</p>
+					<p>
+						<label for="username">手机号码</label>
+						<input type="text" id="username" name="username" placeholder="请输入手机号">
+					</p>
+					<p>
+						<label for="username">邮箱</label>
+						<input type="text" id="username" name="username" placeholder="请输入邮箱">
+					</p>
+				</form>
+			</div>
+
+		</div>
+		<div class="container-center">
+			<img src="images/customized/container-center.jpg" alt="">
+			<div class="container-center-1">
+
+				<span>基本信息</span><p class="required">（必填）</p>
+
+			</div>
+			<div class="container-center-2">
+
+				<div class="container-center-2-top">
+					<span>
+						出游性质
+					</span>
+					<ul class="container-center-2-list">
+						<li>公司</li>
+						<li>私人</li>
+					</ul>
+
+				</div>
+				<form action="" id="centerForm">
+					<p class="box-1">
+						<label for="username">出发地</label>
+						<input type="text" id="starWhere" name="username"placeholder="上海">
+					</p>
+					<p class="box-2">
+						<label for="username">目的地</label>
+						<input type="text" id="goWhere" name="username" placeholder="北京">
+					</p>
+					<!-- 出发日期特殊盒子 -->
+					<p class="box-3">
+						<label for="username">出发日期</label>
+						<input type="text" id="starTime" name="username" placeholder="最早">&nbsp&nbsp&nbsp~&nbsp<input type="text" id="lastTime" name="username" placeholder="最晚">
+
+					</p>
+					<p class="box-4">
+						<label for="username">游玩天数</label>
+						<input type="text" id="playTime" name="username" placeholder="请输入">
+						<span class="setDate">天</span>
+						<!-- 单选框 -->
+						<span class="danxuan">
+							<input type="checkbox" aria-label="...">
+						</span>
+						<span class="setDay">可适当的增减天数</span>
+					</p>
+					<p class="box-5">
+						<label for="username">出行人数</label>
+						<input type="text" id="setPerson" name="username" placeholder=">3">
+						<span class="playPerson">成人</span>
+						<input type="text" id="setChild" placeholder="请输入儿童">
+						<span class="playChild">儿童</span>
+					</p>
+					<p class="box-6">
+						<label for="username">人均预算</label>
+						<input type="text" id="aveBuget" name="username" placeholder="请选择人均预算">
+					</p>
+				</form>
+			</div>
+
+		</div>
+		<div class="container-bottom">
+			<img src="images/customized/container-center.jpg" alt="">
+			<div class="container-bottom-1">
+				<span>特色服务</span><p class="required">（必填）</p>
+			<div class="container-bottom-2">
+
+				<ul class="bottom-list-1">
+					<li class="smaTitle">旅行国界</li>
+					<li class="smali-1">不限</li>
+					<li class="smali">境内</li>
+					<li class="smali">境外</li>
+				</ul>
+				<ul class="bottom-list-2">
+					<li class="smaTitle">行程安排</li>
+					<li class="smali-2">不限</li>
+					<li class="smali">紧凑</li>
+					<li class="smali">适中</li>
+					<li class="smali">宽松</li>
+				</ul>
+				<ul class="bottom-list-3">
+					<li class="smaTitle">住宿安排</li>
+					<li class="smali-3">不限</li>
+					<li class="smali">三星/舒适</li>
+					<li class="smali">四星/高档</li>
+					<li class="smali">五星/豪华</li>
+					<li class="smali">特色住宿</li>
+				</ul>
+				<ul class="bottom-list-4">
+					<li class="smaTitle">我的要求</li>
+					<li class="smali-4"></li>
+
+				</ul>
+				<ul class="bottom-list-5">
+					<li id="sub">提交</li>
+				</ul>
+			</div>
+			</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div id="footer">
+		<div class="footer-list">
+			<ul>
+				<li><a href="#">人民交通出版社</a></li>
+				<li><a href="#">爱自驾</a></li>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">友情链接</a></li>
+				<li><a href="#">爱自驾品牌店</a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+		<div class="copyright">
+			<span>人民交通出版社股份有限公司</span>
+			<span>京ICP备15018898号－1</span>
+			<span>开发团队 排雷组</span>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>自驾团详情页</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<script type="text/javascript" src="script/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="script/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="script/bootstrap.js"></script>
+<link rel="stylesheet" type="text/css" href="style/bootstrap.css">
+
+
+<link href="style/tourism-top.css" rel="stylesheet">
+<link href="style/details/details.css" rel="stylesheet">
+<link href="css/city-picker.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="css/hzw-city-picker.css">
+
+</head>
+<body>
+	<div id="top">
+		<div class="top-box">
+			<div class="top-nav">
+				<ul class="nav-list-1">
+					<li class="list-1"><a href="#"><img src="images/nav-location.png" alt="location"></a></li>
+					<li class="list-2"><a href="#">北京</a></li>
+					<li class="list-3"><a id="cityChoice">切换</a></li>
+					<li class="list-4"><a href="#"><img src="images/nav-phone.png" alt="location"></a></li>
+					<li class="list-5"><a href="#">下载手机<span>APP</span></a></li>
+				</ul>
+				<ul class="nav-list-2">
+					<li class="list-1"><a href="#"><img src="images/nav-qq.png"></a></li>
+					<li class="list-2"><a href="#"><img src="images/nav-sina.png"></a></li>
+					<li class="list-3"><a href="#">登录</a></li>
+					<li class="list-4">｜</li>
+					<li class="list-5"><a href="#"> 注册</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="top-nav-box">
+			<div class="top-navbar">
+				<div class="logo-img">
+					<img src="images/logo.png">
+				</div>
+				<div class="navbar">
+					<ul class="navbar-list">
+						<li><a href="#">首页</a></li>
+						<li><a href="#">目的地</a></li>
+						<li><a href="#">线路</a></li>
+						<li><a href="#">定制</a></li>
+						<li class="active"><a href="#">自驾团</a></li>
+						<li><a href="#">摄影</a></li>
+						<li><a href="#">互动</a></li>
+						<li><a href="#">精选</a></li>
+						<li><a href="#">预定</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="clear"></div> -->
+	<div id="center">
+		<div class="center-indexes">
+			<span><a href="#">首页</a></span>
+			<span class="index-gt">&gt;</span>
+			<span><a href="tourism.html">自驾团</a></span>
+			<span class="index-gt">&gt;</span>
+			<span><a href="details.html">自驾团境内</a></span>
+		</div>
+		<div class="center-view">
+			<div class="view-left">
+				<div class="view-img"></div>
+				<div class="view-img-list">
+					<span class="view-img-btn left-btn">&lt;</span>
+					<ul class="list-img">
+						<li><img src="images/details/view-list-1.jpg"></li>
+						<li><img src="images/details/view-list-2.jpg"></li>
+						<li><img src="images/details/view-list-3.jpg"></li>
+						<li><img src="images/details/view-list-4.jpg"></li>
+					</ul>
+					<span class="view-img-btn right-btn">&gt;</span>
+				</div>
+				<center>
+					<div class="membder-background addMemo-body">
+						<div class="addMemo" id="iframe">
+							<iframe src="iframe.html" id="iframepage" name="iframe" frameborder="0" scrolling="no"></iframe>
+						</div>
+					</div>
+				</center>
+			</div>
+			<div class="view-right">
+				<div class="right-title">
+					<h2>云南落地自驾行摄之旅</h2>
+					<p>大地之画东川红土地，光与影精美搭配的元阳梯田，一个摄影穿越的天堂……
+					</p>
+					<p>
+       					大地的调色板东川红土地，被称为光与影精美搭配的元阳梯田；这些地方，见过便终生难忘，那瑰丽的色彩，那历经亿万年的修炼，那亘古不变的华丽，灼痛了世人的双眼，最美的季节记录最美的影像，探寻最美的风景……
+   					</p>
+       				<p>
+						这是一次记录大地色彩之美的摄影旅行。
+					</p>
+					<p>
+						这是享誉摄影世界的世界级摄影旅行目的地，这里没有都市的喧嚣与烦躁，没有钢筋森林给人带来的种种压抑；这里是放飞心灵的地方，也是您涤荡心灵的梦幻旅程。
+					</p>
+					<div class="right-info">
+						<ul class="info-list">
+							<li class="list-info">爱自驾价&nbsp;：</li>
+							<li class="list-currency">&yen;</li>
+							<li class="list-price">4580</li>
+							<li class="list-currency">起</li>
+							<li class="list-signup"><a href="customized.html">我要报名</a></li>
+							<li class="list-img"><span class="glyphicon glyphicon-heart-empty"></span></li>
+							<li class="info-collection"><a href="">收藏</a></li>
+						</ul>
+						<ul class="input-list">
+							<li class="list-date">
+								出游日期：
+								<input class="text-style" type="date" placeholder=" 请选择出发日期"><a href="#">
+									<!-- <span class="glyphicon glyphicon-triangle-bottom"> -->
+								</a>
+								</span>
+							</li>
+							<li class="list-add">
+								出发城市：
+								<input id="city-picker3" class="form-control text-style" readonly type="text" value="北京市" data-toggle="city-picker">
+							</li>
+							<li class="list-num">
+								<ul>
+									<li>
+										出游人数：
+										<div class="btn-group" role="group" aria-label="人数">
+											<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-minus"></span></button><input type="text" class="btn-text btn btn-default" value="1"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
+										</div>
+										<span class="num-people">成人</span>
+									</li>
+									<li>
+										<div class="btn-group" role="group" aria-label="人数">
+											<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-minus"></span></button><input type="text" class="btn-text btn btn-default" value="0"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
+										</div>
+										<span class="num-people">儿童</span>
+									</li>
+									<li class="standard"><a href="">儿童标准</a></li>
+								</ul>
+							</li>
+							<li class="list-details">形成概要：
+								<span class="list-city">昆明—建水—元阳—元江—玉溪—东川—昆明</span>
+								<span class="list-info"><a href="#summary">详情&gt;&gt;</a></span>
+							</li>
+							<li class="list-title">
+								<span class="img-boy"></span>
+								<span class="img-arrow"></span>
+								<span class="title">量身定制 专属行程 独立包团</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="center-info">
+			<div class="info-style">
+				<span class="style-blue"></span>
+				<span class="info-title">领队介绍</span>
+			</div>
+			<div class="center-logo">
+				<span class="logo-img"></span>
+				<span class="logo-name"><p>中国自驾游联盟南京站</p></span>
+			</div>
+			<div class="center-title">
+				<p>
+					自2005年开始，南京首家专业自驾车旅游公司——“中国自驾游联盟”，本着以城市为中心,以旅行社为龙头,以自驾游自<br />
+					助游为纽带的发展宗旨,通过强劲发展,现已覆盖全国20个省200多个城市，总部设在南京，在“专业保障，旅游保险，特色<br />
+					活动，媒体支撑”的指导思想指引下，平均年组织车友实施自驾游旅游活动百余次，参加人员达数万人！近年来，我们策<br />
+					划与服务的自驾游车队达400余个，参加车辆超过2000辆，参加的车友近十万多人次！ 我们的行程遍布华南、华中、华北<br />
+					、西南、西北20余省、区，并多次成功举办主题自驾活动，同时在尝试开辟国外自驾游市场，引导及推动着中国自驾游的<br />
+					方向与潮流，赢得了广大媒体与各路车会的关注与信任，成为本地区自驾游最具活力、最具经验、最具规模、最具口碑的<br />
+					专业机构。
+				</p>
+			</div>
+		</div>
+		<div class="center-history">
+			<div class="history-top">
+				<h3>历史组团</h3>
+			</div>
+			<div class="history-bottom">
+				<div class="left"><a href=""><span class="glyphicon glyphicon-menu-left"></span></a></div>
+				<div class="play-img">
+					<ul class="img-view">
+						<li class="view-list">
+							<img src="images/details/user-img-6.jpg">
+							<p class="list-info">海天佛国 普陀山祈福之旅</p>
+							<p class="list-date">2015-01-03</p>
+						</li>
+						<li class="view-list">
+							<img src="images/details/user-img-1.jpg">
+							<p class="list-info">冰雪呼伦贝尔 冬季那达慕自驾</p>
+							<p class="list-date">2015-12-30</p>
+						</li>
+						<li class="view-list">
+							<img src="images/details/user-img-2.jpg">
+							<p class="list-info">食在广东 粤菜美食自驾之旅</p>
+							<p class="list-date">2015-12-29</p>
+						</li>
+						<li class="view-list">
+							<img src="images/details/user-img-3.jpg">
+							<p class="list-info">彩云之南 边关秘境</p>
+							<p class="list-date">2016-01-03</p>
+						</li>
+						<!-- 轮播图 -->
+						<li class="view-list">
+							<img src="images/details/user-img-6.jpg">
+							<p class="list-info">海天佛国 普陀山祈福之旅</p>
+							<p class="list-date">2015-01-03</p>
+						</li>
+						<li class="view-list">
+							<img src="images/details/user-img-1.jpg">
+							<p class="list-info">海天佛国 普陀山祈福之旅</p>
+							<p class="list-date">2015-01-03</p>
+						</li>
+						<li class="view-list">
+							<img src="images/details/user-img-2.jpg">
+							<p class="list-info">海天佛国 普陀山祈福之旅</p>
+							<p class="list-date">2015-01-03</p>
+						</li>
+						<li class="view-list">
+							<img src="images/details/user-img-3.jpg">
+							<p class="list-info">海天佛国 普陀山祈福之旅</p>
+							<p class="list-date">2015-01-03</p>
+						</li>
+					</ul>
+				</div>
+				<div class="right"><a href=""><span class="glyphicon glyphicon-menu-right"></span></a></div>
+			</div>
+		</div>
+		<div class="center-bottom">
+			<div class="bottom-top">
+				<ul class="list">
+					<li class="active">行程简介</li>
+					<li>费用明细</li>
+					<li>其他说明</li>
+					<li>用户评论</li>
+				</ul>
+			</div>
+			<div class="bottom-body">
+				<div class="body-top">
+					<p id="summary">行程简介</p>
+				</div>
+				<div class="body-date-info">
+					<span class="info-radius">
+						<div class="date-radius">
+							<span class="radius-in"></span>
+						</div>
+					</span>
+					<div class="date-info">
+						<div class="date-box">
+							<p class="date-title">第二天</p>
+							<p class="title-Route">昆明—建水</p>
+							<p class="title-arrange">餐食：早餐、晚餐<span>住宿：建水</span></p>
+							<p class="title-info">
+								酒店早餐后，前往由传统的汉族青砖四合大院、彝族土掌房和汉彝结合的瓦檐土掌房三类建筑风格结合的民居世界——团山民居，团山至今还保存着的完整古村落整体格局，有着滇南乡村特色风貌与传统社会人文环境的原生态特点，世所罕见，极为珍贵。到达建水县城后，前往参观朱家花园，有一组规模宠大的清代民居建筑，有“滇南大观园”之誉！房间内的床，凳，桌，椅均采用紫木雕刻，体现清代风格，门僮及导游小姐的服饰和接待客人的清式礼仪，让人有恍若置身百年前历史生活的感受。
+							</p>
+							<div class="title-img">
+								<span class="title-img-unified title-img-1"></span>
+								<span class="title-img-unified title-img-2"></span>
+							</div>
+						</div>
+						<div class="date-box">
+							<p class="date-title">第三天</p>
+							<p class="title-Route">建水—元阳</p>
+							<p class="title-arrange">餐食：早餐、晚餐<span>住宿：元阳</span></p>
+							<p class="title-info">
+								酒店早餐后，前往中国最美的元阳梯田。元阳哈尼梯田主要有三大核心区组成——【坝达景区】、【老虎嘴景区】、【多依树景区】，去老虎嘴俯看梯田是很好的选择，6000多亩梯田分布于深谷，像一朵巨大的花蕊，老虎嘴被美国摄影家称为世界上最壮丽的田园风光；晚上看夕阳，则应该选择坝达景区，在龙树坝拍日落也是不错的选择；感受大自然的鬼斧神工，19万亩映着蓝天的哈尼梯田就在你的脚下，哈尼梯田有一千多年的历史，至今科学仍无法解答，这样大面积的，在这崇山峻岭中是怎么挖掘的。
+							</p>
+							<div class="title-img">
+								<span class="title-img-unified title-img-3"></span>
+								<span class="title-img-unified title-img-4"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="body-top body-center">
+					<p id="summary">费用明细</p>
+					<ul  class="title-li">
+						<li>【活动费用】4580元/人</li>
+						<li>【VIP会员价】4500元/人</li>
+						<li>【儿童费用】2500元/人（1.1米-1.4米不占床）</li>
+					</ul>
+					<ul class="title-info">
+						<li class="title-top">【费用包含】</li>
+						<li>1、交通：起亚狮跑或现代IX35（4人1车，1000元/人，如不足4人1车，需补车费）</li>
+						<li>2、通讯：通讯设备，车标，<车队出行的后勤服务>组织费用</li>
+						<li>3、用餐：6早6晚，（晚餐60元/人）</li>
+						<li>4、住宿：建水住五星标准；昆明，元阳，玉溪住四星标准；东川红土地住三星标准</li>
+						<li>5、保险：太平洋旅游意外险</li>
+						<li>6、领队：优秀领队及当地导游服务</li>
+						<li>7、景点：建水朱家花园，团山民居，元阳梯田，红河那诺梯田，东川红土地</li>
+					</ul>
+					<ul class="title-info">
+						<li class="title-top">【费用不含】</li>
+						<li>1、各地往返昆明机票自理</li>
+						<li>2、全程中餐自理，不占床位早餐请自理</li>
+						<li>3、车辆的油费，路桥费，停车费用</li>
+						<li>4、全程用餐过程中客人所点的酒水费用</li>
+						<li>5、酒店电话费，洗衣费，购物等个人消费</li>
+					</ul>
+
+				</div>
+				<div class="body-date-list">
+					<p class="date-list date-one">第一天<span class="date-radius-sm"></span></p>
+					<p class="date-list date-two">第二天<span class="date-radius-sm"></span></p>
+					<p class="date-list date-three">第三天<span class="date-radius-sm"></span></p>
+					<p class="date-list date-four">第四天<span class="date-radius-sm"></span></p>
+					<p class="date-list date-five">第五天<span class="date-radius-sm"></span></p>
+					<p class="date-list date-six">第六天<span class="date-radius-sm"></span></p>
+				</div>
+			</div>
+			<div class=""></div>
+		</div>
+	</div>
+
+
+
+
+	<div id="footer">
+		<div class="footer-list">
+			<ul>
+				<li><a href="#">人民交通出版社</a></li>
+				<li><a href="#">爱自驾</a></li>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">友情链接</a></li>
+				<li><a href="#">爱自驾品牌店</a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+		<div class="copyright">
+			<span>人民交通出版社股份有限公司</span>
+			<span>京ICP备15018898号－1</span>
+			<span>开发团队 排雷组</span>
+		</div>
+	</div>
+
+
+
+
+
+
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/city-picker.data.js"></script>
+<script src="js/city-picker.js"></script>
+<script src="js/main.js"></script>
+
+<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/city-data.js"></script>
+<script type="text/javascript" src="js/hzw-city-picker.min.js"></script>
+<script>
+	var cityPicker = new HzwCityPicker({
+		data: data,
+		target: 'cityChoice',
+		valType: 'k-v',
+		hideCityInput: {
+			name: 'city',
+			id: 'city'
+		},
+		hideProvinceInput: {
+			name: 'province',
+			id: 'province'
+		},
+		callback: function(){
+			alert('OK');
+		}
+	});
+</script>
+
+cityPicker.init();
+</body>
+</html>
