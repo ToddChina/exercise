@@ -22,6 +22,10 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 .clear{
 	clear: both;
 }
+#header-top{
+	height: 125px;
+	overflow: hidden;
+}
 #top{
 	min-width: 1000px;
 	height: 45px;
@@ -42,6 +46,7 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	text-decoration: none;
 	color: #fff;
 	font-size: 16px;
+	cursor: pointer;
 }
 #top .top-nav ul{
 	float: left;
@@ -56,7 +61,7 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	line-height: 20px;
 }
 #top .top-nav ul li a:hover{
-	color: #cecccc;
+	color: #50bbdb;
 }
 #top .top-nav .nav-list-1 .list-2{
 	margin-left: 13px;
@@ -111,7 +116,9 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 #top .top-navbar .navbar ul li{
 	float: left;
 }
-
+.bgc{
+	color: #ff0;
+}
 #top .top-navbar .navbar ul li a{
 	text-decoration: none;
 	color: #333333;
@@ -146,7 +153,7 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	width: 100%;
 	height: 402px;
 	position: relative;
-	top: -402px;
+	top: -412px;
 	z-index: 6;
 }
 .banner-one-list{
@@ -188,15 +195,16 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	margin-right: 12px;
 	width: 20px;
 	height: 20px;
-	border: 0px solid;
+	border: 0px solid; 
 	background-color: #fff;
 	border-radius:20px;
+	cursor: pointer;
 }
 .search{
 	width: 1000px;
 	height: 100px;
 	margin:0 auto;
-	margin-top: -402px;
+	margin-top: -412px;
 }
 .search-text{
 	width: 353px;
@@ -206,15 +214,16 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 }
 .search-text ul li{
 	list-style: none;
-	height:24px;
+	height:27px;
 	width: 353px;
 	border: 2px solid #4ebbda;
 	margin-top:50px;
 }
 .search-text ul li input{
-	width:313px;
-	height: 21px;
-
+	width:314px;
+	height: 23px;
+	border: 1px solid #4ebbda;
+	border-color: transparent;
 }
 .search-text ul li img{
 	width: 10%;
@@ -231,7 +240,7 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	float: left;
 	font-size: 12px;
 	color:#bfbfbf;
-	padding-left: 6px;
+	padding-left: 6px; 
 }
 .search-city li a{
 	font-size: 12px;
@@ -256,6 +265,9 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	color: #fff;
 	text-indent: 1em;
 	line-height: 45px;
+}
+#container .container-top a{
+	text-decoration: none;
 }
 #container .container-start{
 	width: 326px;
@@ -312,11 +324,16 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	color: #333333;
 }
 #container .container-word{
+	height: 12px;
 	margin-top: 19px;
 	text-indent: 2.5em;
 	color:#9f9f9f;
 	font-size: 12px;
-	font-family:MicrosoftYaHei-Regular;
+	font-family:MicrosoftYaHei-Regular; 	
+}
+#container .container-word span{
+	position: relative;
+	top: 3px;
 }
 #container .container-bottom{
 	overflow: hidden;
@@ -326,7 +343,12 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	background-repeat: no-repeat;
 	background-position-x:25px;
 }
+#container .container-bottom a{
+	text-decoration: none;
+}
 #container .container-add{
+	height: 12px;
+	width: 130px;
 	font-size: 12px;
 	font-family:MicrosoftYaHei-Regular;
 	color: #7a7a7a;
@@ -334,41 +356,48 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	margin-left: 61px;
 }
 #container .container-review{
-	width: 75px;
-	height: 15px;
+	width: 81px;
+	height: 22px;
 	list-style: none;
-	margin-left: 230px;
-	margin-top: -11px;
+	margin-left: 225px;
+	margin-top: -22px;
 }
 #container .container-browes{
-	text-align: right;
 	width:36px;
 	height: 15px;
 	float: left;
 	font-size: 12px;
 	color:#707070;
 	font-family:MicrosoftYaHei-Regular;
-	background-image: url(../../images/tourism/2.gif);
-	background-repeat: no-repeat;
-	background-position-x:2px;
+}
+#container .container-browes span{
+	margin-left: 4px;
+}
+#container .container-browes img{
 	cursor: pointer;
 }
 #container .container-laud{
-	text-align: right;
 	font-size: 12px;
 	color: #707070;
 	font-family:MicrosoftYaHei-Regular;
 	float: right;
-	width: 26px;
-	height: 15px;
-	background-image: url(../../images/tourism/3.gif);
-	background-repeat:no-repeat;
+	width: 33px;
+	height: 22px;
+}
+#container .container-laud span{
+	margin-left: 6px;
+}
+#container .container-laud img{
+	margin-top: -2px;
+	width: 18px;
+	height: 21px;
 	cursor: pointer;
 }
 .container-first{
 	width:1000px;
 	height: 1451px;
 	margin: 0 auto;
+	overflow: hidden;
 }
 .first-word{
 	width: 1000px;
@@ -378,7 +407,7 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 .first-word ul{
 	width: 1000px;
 	height: 32px;
-	margin-top: 40px;
+	margin-top:35px;
 }
 .first-word ul li{
 	list-style: none;
@@ -387,7 +416,7 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	font-weight: 900;
 	float: left;
 	font-size: 28px;
-	font-family:MicrosoftYaHei-Regular;
+	font-family:MicrosoftYaHei-Regular; 
 	color: #58667d;
 }
 .first-word-two{
@@ -397,18 +426,23 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	color: #999999;
 	font-size: 23px;
 	margin-left: 31px;
-	line-height: 31px;
+	line-height: 40px;
 }
 .first-word-three{
 	float: right;
 	line-height: 31px;
 }
 .first-word-three a{
+	position: relative;
+	top: 14px;
 	font-weight: 700;
 	font-size: 14px;
-	font-family:MicrosoftYaHei-Regular;
-	text-decoration: none;
-	color: #999999;
+	font-family:MicrosoftYaHei-Regular; 
+	text-decoration: none !important;
+	color: #999999 !important;
+}
+.first-word-four{
+	border: 1px solid #9f9f9f;
 }
 .first-pic{
 	width: 1000px;
@@ -463,7 +497,7 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	text-indent: 2.5em;
 	color: #9f9f9f;
 	font-size: 12px;
-	font-family:MicrosoftYaHei-Regular;
+	font-family:MicrosoftYaHei-Regular; 	
 }
 .first-pic-two{
 	margin-top: 7px;
@@ -570,7 +604,7 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 .second-word-one{
 	float: left;
 	font-size: 28px;
-	font-family:MicrosoftYaHei-Regular;
+	font-family:MicrosoftYaHei-Regular; 
 	color: #58667d;
 }
 .second-word-two{
@@ -586,7 +620,7 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	float: right;
 	color: #999999;
 	line-height: 31px;
-	font-family:MicrosoftYaHei-Regular;
+	font-family:MicrosoftYaHei-Regular; 
 }
 .second-pic{
 	width: 1000px;
@@ -711,4 +745,44 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 #footer .copyright span{
 	margin-right: 30px;
 	color: #fff;
+}
+/*城市切换*/
+#change-city{
+	width: 706px;
+    height: 105px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px #0CC;
+	position:absolute;
+	top:45px;
+	left:14%;
+	z-index: 99;
+	display: none;
+}
+#change-city p {
+    font-size: 15px;
+    font-family: "微软雅黑";
+    margin-top: 10px;
+    margin-left: 30px;
+    display: block;
+    width: 50px;
+    float: left;
+}
+#city-list-1 {
+    float: left;
+    width: 600px;
+    height: 100px;
+    margin-top: 10px;
+}
+.city-list-add {
+    float: left;
+    position: relative;
+    font-size: 15px;
+    font-family: "微软雅黑";
+    color: #50B8D8;
+    display: block;
+    height: 22px;
+    width: 66px;
+    text-align: center;
+    cursor: pointer;
 }
