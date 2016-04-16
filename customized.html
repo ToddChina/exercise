@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>自驾团页面</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<script type="text/javascript" src="script/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="script/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="script/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="script/jquery.validate.js"></script>
+<script type="text/javascript" src="script/bootstrap.js"></script>
+<link rel="stylesheet" href="style/customized/dianji.css">
+<link href="style/customized/customized.css" rel="stylesheet">
+<link rel="stylesheet" href="style/bootstrap.css">
+</head>
+
+<body>
+		<div id="top">
+		<div class="top-box">
+			<div class="top-nav">
+				<ul class="nav-list nav-list-1">
+					<li class="top-list-nav list-1"><a href="#"><img src="images/nav-location.png" alt="location"></a></li>
+					<li class="top-list-nav list-2"><a href="#">北京</a></li>
+					<li class="top-list-nav list-3"><a id="cityChoice">切换</a>
+						<div id="city-add-box" style="display:none">
+							<p>全国：</p>
+							<ul id="city-list-1">
+								<li class="city-list-add">北京</li>
+								<li class="city-list-add">天津</li>
+								<li class="city-list-add">河北</li>
+								<li class="city-list-add">山西</li>
+								<li class="city-list-add">内蒙古</li>
+								<li class="city-list-add">辽宁</li>
+								<li class="city-list-add">吉林</li>
+								<li class="city-list-add">黑龙江</li>
+								<li class="city-list-add">上海</li>
+								<li class="city-list-add">江苏</li>
+								<li class="city-list-add">浙江</li>
+								<li class="city-list-add">安徽</li>
+								<li class="city-list-add">福建</li>
+								<li class="city-list-add">江西</li>
+								<li class="city-list-add">山东</li>
+								<li class="city-list-add">河南</li>
+								<li class="city-list-add">湖北</li>
+								<li class="city-list-add">湖南</li>
+								<li class="city-list-add">广东</li>
+								<li class="city-list-add">广西</li>
+								<li class="city-list-add">海南</li>
+								<li class="city-list-add">重庆</li>
+								<li class="city-list-add">四川</li>
+								<li class="city-list-add">贵州</li>
+								<li class="city-list-add">云南</li>
+								<li class="city-list-add">西藏</li>
+								<li class="city-list-add">陕西</li>
+								<li class="city-list-add">甘肃</li>
+								<li class="city-list-add">青海</li>
+								<li class="city-list-add">宁夏</li>
+								<li class="city-list-add">新疆</li>
+							</ul>
+						</div>
+					</li>
+					<li class="top-list-nav list-4"><a href="#"><img src="images/nav-phone.png" alt="location"></a></li>
+					<li class="top-list-nav list-5"><a href="#">下载手机<span>APP</span></a></li>
+				</ul>
+				<ul class="nav-list nav-list-2">
+					<li class="top-list-nav list-1"><a href="#"><img id="qq-png" src="images/nav-qq.png"></a></li>
+					<li class="top-list-nav list-2"><a href="#"><img id="sina-png" src="images/nav-sina.png"></a></li>
+					<li class="top-list-nav list-3"><a href="#" class="btn btn-primary btn-lg " data-toggle="modal" data-target="#myModal" id="btnId">登录</a></li>
+					<li class="top-list-nav list-4">｜</li>
+					<li class="top-list-nav list-5"><a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signIn" id="btnId"> 注册</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="top-nav-box">
+			<div class="top-navbar">
+				<div class="logo-img">
+					<img src="images/logo.png">
+				</div>
+				<div class="navbar">
+					<ul class="navbar-list">
+						<li><a href="#">首页</a></li>
+						<li><a href="#">目的地</a></li>
+						<li><a href="#">线路</a></li>
+						<li><a href="#">定制</a></li>
+						<li><a href="#">自驾团</a></li>
+						<li><a href="#">摄影</a></li>
+						<li><a href="#">互动</a></li>
+						<li><a href="#">精选</a></li>
+						<li><a href="#">预定</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Button to trigger modal -->
+	<div class="modal fade" id="myModal">
+  		<div class="modal-dialog modal-dialog-width">
+    		<div class="modal-content">
+      			<div class="modal-header">
+      				<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+      				<div class="modal-header-in">
+      					<img src="images/login-logo.gif" alt="">
+      				</div>
+
+     			  </div>
+            <div class="modal-body">
+            	<div class="modal-body-in">
+                <a href="#" data-toggle="modal" data-target="#VipLogin" data-dismiss="modal">会员登录</a>
+            		<input type="text" class="modal-body-input" placeholder="&nbsp;&nbsp;邮箱/手机/用户名">
+            		<input type="password" class="modal-body-input" placeholder="&nbsp;&nbsp;密码">
+            		<button type="button" class="btn btn-primary btn-login" data-dismiss="modal">登陆</button>
+            		<a href="#">忘记密码</a>
+            		<span class="free-signin">还没有账号？<a href="#" data-toggle="modal" data-target="#signIn" data-dismiss="modal">免费注册</a></span>
+                <div class="clear"></div>
+            		<div class="modal-footer-in">
+            			<div class="modal-footer-in-span"><span class="otherway-login">其他报名方式</span></div>
+            			<br>
+            			<button type="button" class="btn btn-primary not-login"  data-dismiss="modal">不登录，直接报名></button>
+            		</div>
+              </div>
+          </div>
+    		</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+  <div class="modal fade" id="signIn">
+    <div class="modal-dialog modal-dialog-width">
+      <div class="modal-content modal-content-signIn">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+          <div class="modal-header-in">
+            <img src="images/login-logo.gif" alt="爱自驾">
+          </div>
+        </div>
+        <div class="modal-body modal-body-signIn">
+          <a href="#" class="modal-body-signIn-byPhone">用手机注册</a>
+          <div class="clear"></div>
+          <input type="text" class="modal-body-signIn-input" placeholder="&nbsp;&nbsp;请输入邮箱">
+          <input type="password" class="modal-body-signIn-input" placeholder="&nbsp;&nbsp;密码">
+          <input type="password" class="modal-body-signIn-input" placeholder="&nbsp;&nbsp;设置密码">
+          <input type="password" class="modal-body-signIn-input" placeholder="&nbsp;&nbsp;输入密码">
+          <input type="text" class="modal-body-signIn-input" placeholder="&nbsp;&nbsp;输入邀请码，可不填">
+          <div class="modal-body-signIn-agreement">
+            <span>注册视为同意<a href="#">《爱自驾用户使用协议》</a></span>
+            <button type="button" class="btn btn-primary not-login"  data-dismiss="modal">注册</button>
+          </div>
+          <div class="modal-footer-in">
+            <div class="modal-footer-in-span"><span class="otherway-login">其他报名方式</span></div>
+            <br>
+            <button type="button" class="btn btn-primary not-login"  data-dismiss="modal">不登录，直接报名></button>
+          </div>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+
+  <div class="modal fade" id="VipLogin">
+    <div class="modal-dialog modal-dialog-Vip-width">
+      <div class="modal-content modal-content-Vip">
+        <div class="modal-left">
+          <div class="modal-left-header">
+            <span>会员登陆</span>
+          </div>
+          <div class="modal-left-contant">
+            <div class="modal-left-contant-sign">
+              <div class="modal-left-contant-sign-name">
+                <span>会员名：</span>
+              </div>
+              <div class="modal-left-contant-sign-password">
+                <span>登陆密码：</span>
+              </div>
+              <div class="modal-left-contant-sign-match">
+                <span>验证码：</span>
+              </div>
+            </div>
+            <div class="modal-left-contant-input">
+              <input type="text" class="modal-left-contant-input-name">
+              <input type="password" class="modal-left-contant-input-password">
+              <div class="modal-left-contant-input-match">
+                <span>点击显示</span>
+              </div>
+            </div>
+          </div>
+          <div class="modal-left-footer">
+            <input type="checkbox" class="modal-left-footer-checkbox">
+            <div class="modal-left-footer-checkbox-ex">
+              <span>两周内自动登陆</span>
+              <a href="#">忘记密码？</a>
+            </div>
+            <div class="clear"></div>
+            <div class="modal-left-footer-login">
+              <a href="#" data-toggle="modal" data-target="#signIn" data-dismiss="modal">没有用户名？立即注册！</a>
+              <button type="button" class="btn btn-primary"  data-dismiss="modal">立即登录</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-right">
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+          <div class="modal-right-contant">
+            <span>非会员预定</span>
+            <button type="button" class="btn btn-primary"  data-dismiss="modal">不登录，直接预定></button>
+          </div>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+
+
+
+
+
+
+	<div id="banner">
+	</div>
+	<div id="container">
+		<div class="container-top">
+			<img src="images/customized/container-top.jpg" alt="">
+			<div class="container-top-1">
+
+				<span>联系人信息</span><p class="required">（必填）</p>
+
+			</div>
+			<div class="container-top-2">
+				<form action="" id="topForm">
+					<div class="topForm-1">
+						<label for="username"><span class="">姓名</span></label>
+						<input type="text" id="username" name="username" placeholder="请输入姓名">
+						<p class="NameMsg"><i class="ati"></i>请输入正确的姓名</<p>
+					</div>
+					<div class="topForm-2">
+						<label for="username"><span>手机号码</span></label>
+						<input type="text" id="phoneNum" name="username" placeholder="请输入手机号">
+						<p class="phNum">请输入正确手机号</p>
+					</div>
+					<div class="topForm-3">
+						<label for="username"><span>邮箱</span></label>
+						<input type="text" id="email" name="username" placeholder="请输入邮箱">
+						<p class="emailNum">请输入正确邮箱</p>
+					</div>
+				</form>
+			</div>
+
+		</div>
+		<div class="container-center">
+			<img src="images/customized/container-center.jpg" alt="">
+			<div class="container-center-1">
+				<span>基本信息</span><p class="required">（必填）</p>
+			</div>
+			<div class="container-center-2">
+				<div class="container-center-2-top">
+					<span>
+						出游性质
+					</span>
+					<ul class="container-center-2-list">
+						<li class="centerli-1"><a href="">公司</a></li>
+						<li class="centerli-2"><a href="">私人</a></li>
+					</ul>
+
+				</div>
+				<form action="" id="centerForm">
+					<div class="box-1">
+						<label for="username">出发地</label>
+						<input type="text" id="starWhere" name="username"placeholder="上海">
+					</div>
+					<div class="box-2">
+						<label for="username">目的地</label>
+						<input type="text" id="goWhere" name="username" placeholder="北京">
+					</div>
+					<!-- 出发日期特殊盒子 -->
+					<div class="box-3">
+						<label for="username">出发日期</label>
+						<input type="date" id="starTime" name="username" placeholder="最早">&nbsp&nbsp&nbsp~&nbsp;<input type="date" id="lastTime" name="username" placeholder="最晚">
+
+					</div>
+					<div class="box-4">
+						<label for="username">游玩天数</label>
+						<input type="text" id="playTime" name="username" placeholder="请输入">
+						<span class="setDate">天</span>
+						<!-- 单选框 -->
+						<span class="danxuan">
+							<input type="checkbox" aria-label="...">
+						</span>
+						<span class="setDay">可适当的增减天数</span>
+					</div>
+					<div class="box-5">
+						<label for="username">出行人数</label>
+						<input type="text" id="setPerson" name="username" placeholder=">3">
+						<span class="playPerson">成人</span>
+						<input type="text" id="setChild" placeholder="请输入儿童">
+						<span class="playChild">儿童</span>
+					</div>
+					<div class="box-6">
+						<label for="username">人均预算</label>
+						<input type="text" id="aveBuget" name="username" placeholder="请选择人均预算">
+					</div>
+				</form>
+			</div>
+
+		</div>
+		<div class="container-bottom">
+			<img src="images/customized/container-center.jpg" alt="">
+			<div class="container-bottom-1">
+				<span>特色服务</span><p class="required">（必填）</p>
+			</div>
+			<div class="container-bottom-2">
+				<ul class="bottom-list-1">
+					<li class="smaTitle">旅行国界</li>
+					<li class="smali-1">不限</li>
+					<li class="smali">境内</li>
+					<li class="smali">境外</li>
+				</ul>
+				<ul class="bottom-list-2">
+					<li class="smaTitle">行程安排</li>
+					<li class="smali-2">不限</li>
+					<li class="smali">紧凑</li>
+					<li class="smali">适中</li>
+					<li class="smali">宽松</li>
+				</ul>
+				<ul class="bottom-list-3">
+					<li class="smaTitle">住宿安排</li>
+					<li class="smali-3">不限</li>
+					<li class="smali">三星/舒适</li>
+					<li class="smali">四星/高档</li>
+					<li class="smali">五星/豪华</li>
+					<li class="smali">特色住宿</li>
+				</ul>
+				<ul class="bottom-list-4">
+					<li class="smaTitle">我的要求</li>
+					<li class="smali-4"><textarea name="" id="texWord" cols="80" rows="20"></textarea></li>
+				</ul>
+				<input type="submit" id="sub">
+			</div>
+		</div>
+
+		</div>
+	</div>
+	<div id="footer">
+		<div class="footer-list">
+			<ul>
+				<li><a href="#">人民交通出版社</a></li>
+				<li><a href="#">爱自驾</a></li>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">友情链接</a></li>
+				<li><a href="#">爱自驾品牌店</a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+		<div class="copyright">
+			<span>人民交通出版社股份有限公司</span>
+			<span>京ICP备15018898号－1</span>
+			<span>开发团队 排雷组</span>
+		</div>
+	</div>
+	<script type="text/javascript">
+	//表单验证姓名
+		(function(){
+			var regName = /^[\u4e00-\u9fa5]{2,3}$/;
+			var regNum = /^[0-9]{11}$/;
+			var regEmail =/^([a-zA-z0-9]+)\@([a-zA-z0-9]+)\.([a-zA-z0-9]{2,3})$/
+			$("#username").blur(function(){
+				var val = $("#username").val()
+				var testNa =regName.test(val);
+				console.log(testNa);
+				if(testNa){
+					$(".NameMsg").css("display","none")
+				}else{
+					$(".NameMsg").css("display","block")
+				}
+			});
+			//表单验证手机号
+			$("#phoneNum").blur(function(){
+				var val = $("#phoneNum").val();
+				var testNu = regNum.test(val);
+				if(testNu){
+					$(".phNum").css("display","none");
+				}else{
+					$(".phNum").css("display","block");
+				}
+			});
+			$("#email").blur(function(){
+				var val = $("#email").val();
+				console.log(val)
+				var testEm = regEmail.test(val);
+				if(testEm){
+					$(".emailNum").css("display","none");
+				}else{
+					$(".emailNum").css("display","block");
+				}
+			});
+		})()
+	//点击事件边背景颜色公司和私人
+
+	$(".container-center-2-list li").click(function(){
+		$(this).css("background-color","#50bbdb");
+		$(this).find("a").css("color","#fff");
+		$(this).siblings().css("background-color","#fff");
+		$(this).siblings().find("a").css("color","#5d5d5d");
+	});
+	//点击事件边背景颜色 不限
+	$(".bottom-list-1 li").click(function(){
+			$(this).css("background-color","#50bbdb");
+			$(this).siblings().css("background-color","#fff");
+
+		})
+	$(".bottom-list-2 li").click(function(){
+			$(this).css("background-color","#50bbdb");
+			$(this).siblings().css("background-color","#fff");
+
+		})
+		$(".bottom-list-3 li").click(function(){
+			$(this).css("background-color","#50bbdb");
+			$(this).siblings().css("background-color","#fff");
+
+		})
+		//切换城市名
+		var myBtn = document.getElementById("cityChoice");
+		var myDiv = document.getElementById("city-add-box")
+
+		document.body.onclick = function(e){
+			var target = e.target;
+			if (target != myBtn) {
+				myDiv.style.display = "none";
+			};
+		}
+		$("#cityChoice").click(function(){
+		$("#city-add-box").toggle();
+	})
+
+	$("#city-list-1").find("li").click(function(){
+		var city = $(this).text();
+		$("#top .nav-list-1 .list-2 a").text(city);
+	});
+
+
+	</script>
+
+</body>
+</html>

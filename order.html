@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自驾团填写订单页</title>
+	<link rel="stylesheet" href="style/order/order.css">
+	<link rel="stylesheet" href="style/bootstrap.min.css">
+</head>
+<body>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+	        <img src="images/motai-logo.jpg" class="motai-logo"alt="">
+	        <img src="images/false.jpg" alt="" class="btn-default motai-false" data-dismiss="modal">
+	      </div>
+	      <div class="modal-body">
+	      	<input type="text" placeholder="&nbsp 邮箱/手机/用户名" class="motai-input">
+	      	<input type="text" placeholder="&nbsp 密码" class="motai-input">
+	      	<button type="button" class="label label-info motai-denglu"><span class="motai-denglu-go">登录</span></button>
+	      	<div>
+	      		<a href="" class="motai-font1"><p>忘记密码</p></a>
+	      		<p class="motai-font2">还没有账号?</p><a href="#myModa2" data-toggle="modal" data-dismiss="modal"><span class="motai-font3">免费注册</span></a>
+
+	      	</div>
+	 		<div class="motai-hengxian hengxian1"></div>
+	 		<p class="motai-font4">其他报名方式</p>
+	 		<div class="motai-hengxian hengxian2"></div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="label label-info  motai-straight"><span class="motai-straight-p">不登陆，直接报名</span>></button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
+
+	<div class="modal fade" id="myModa2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+	        <img src="images/motai-logo.jpg" class="motai-logo"alt="">
+	        <img src="images/false.jpg" alt="" class="btn-default motai-false" data-dismiss="modal">
+	        <a href=""><span>用手机注册</span></a>
+	      </div>
+	      <div class="modal-body">
+	      	<input type="text" placeholder="&nbsp 请输入邮箱" class="motai-input">
+	      	<input type="text" placeholder="&nbsp 用户名，4-16个字符，字母/中文/数字" class="motai-input">
+	      	<input type="text" placeholder="&nbsp 设置密码" class="motai-input">
+	      	<input type="text" placeholder="&nbsp 输入密码" class="motai-input">
+	      	<input type="text" placeholder="&nbsp 输入邀请码，可不填" class="motai-input">
+	      	<p><span>注册视为同意</span>《爱自驾用户使用协议》</p>
+	      	<button type="button" class="label label-info motai-zhuce"><span class="motai-zhuce-go">注册</span></button>
+	 		<div class="motai-hengxian hengxian1"></div>
+	 		<p class="motai-font4">其他报名方式</p>
+	 		<div class="motai-hengxian hengxian2"></div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="label label-info  motai-straight"><span class="motai-straight-p">快速登录></span>></button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
+
+
+	<div id="top">
+		<div class="top-nav">
+			<ul class="nav-list-1">
+				<li class="list-1"><a href="#"><img src="images/nav-location.png" alt="location"></a></li>
+				<li class="list-2"><a href="#">北京</a></li>
+				<li class="list-3"><a href="#">切换</a></li>
+				<li class="list-4"><a href="#"><img src="images/nav-phone.png" alt="location"></a></li>
+				<li class="list-5"><a href="#">下载手机<span>APP</span></a></li>
+			</ul>
+			<ul class="nav-list-2">
+				<li class="list-1"><a href="#"><img src="images/nav-qq.png"></a></li>
+				<li class="list-2"><a href="#"><img src="images/nav-sina.png"></a></li>
+				<li class="btn  list-3" data-toggle="modal" data-target="#myModal"><a href="#">登录</a></li>
+				<li class="list-4">｜</li>
+				<li class="list-5" data-toggle="modal" data-target="#myModa2"><a href="#"> 注册</a></li>
+			</ul>
+		</div>
+		<div class="top-navbar">
+			<div class="logo-img">
+				<img src="images/logo.png">
+			</div>
+			<div class="navbar">
+				<ul class="navbar-list">
+					<li><a href="#">首页</a></li>
+					<li><a href="#">目的地</a></li>
+					<li><a href="#">线路</a></li>
+					<li><a href="#">订制</a></li>
+					<li><a href="#">自驾团</a></li>
+					<li><a href="#">摄影</a></li>
+					<li><a href="#">互动</a></li>
+					<li><a href="#">精选</a></li>
+					<li><a href="#">预定</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+
+	<div class="content">
+		<div class="content-1">
+			<span>自驾团</span>
+			<span>></span>
+			<span>境内</span>
+			<span>></span>
+			<span> 云南落地自驾行摄之旅</span>
+			<span>></span>
+			<span>我要报名</span>
+			<span>></span>
+			<span>填写订单</span>
+		</div>
+		<div class="content-2">
+			<div class="content-2-hr"></div>
+			<div class="content-circle">
+				<img src="images/content-circle.jpg" alt="">
+				<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+				<img src="images/content-circle.jpg" alt="">
+				<span>2</span>
+				<img src="images/content-circle.jpg" alt="">
+				<span>3</span>
+				<img src="images/content-circle.jpg" alt="">
+				<span>4</span>
+			</div>
+		</div>
+		<div class="content-3">
+			<span class="content-3-blue">选择路线</span>
+			<span class="content-3-blue">&nbsp填写订单</span>
+			<span>在线支付</span>
+			<span>付款成功</span>
+		</div>
+		<div class="content-4">
+			<div class="content-4-part1">
+				<p class="p">订单信息</p><hr class="hr1">
+				<span class="font font1">成人</span><span class="font font2">1 X ￥5280</span><br>
+				<span class="font font3">房间 X</span><span class="font font4">1</span>
+				<hr class="hr2">
+				<span class="font font5">意外旅游险</span><span class="font font6">1 x ￥120</span><hr class="hr3">
+				<span class="font font7">优惠金额</span><span class="font font8">-￥0</span><hr class="hr4">
+				<span class="font font9">总计</span><span class="font10">￥</span><span class="font11">5400</span>
+			</div>
+			<div class="content-4-part2">
+				<div class="bg">
+					<p>线路信息</p>
+					<span class="label label-info change">修改</span>
+				</div>
+				<div class="substance">
+					<p class="rule">线路名称：&nbsp       [北京出发] <span class="blue2">经奢自驾八人小团：云南落地自驾行摄7日之旅</span> </p><p class="rule">出游日期<span class="blue2">*</span>：   &nbsp2016-01-17 </p><p class="rule">成人<span class="blue2">*</span>：  &nbsp   &nbsp 1 x ￥5280</p><p class="rule">儿童：&nbsp &nbsp   &nbsp0  x ￥5280</p>	<p class="rule">房间<span class="blue2">*</span>：<span class="room">（2人间）</span></p>
+					<p class="rule">是否同意拼房<span class="blue2">*</span>：</p>
+					<div class="substance-list">
+						<ul>
+							<li class="color">-</li>
+							<li>1</li>
+							<li class="color">+</li>
+						</ul>
+					</div>
+					<div class="check1">
+						<input type="radio" name="xm" value="1" checked />&nbsp &nbsp 同意拼房
+					</div>
+					<div class="check2">
+						<input type="radio" name="xm" value="1"  />&nbsp &nbsp 不同意拼房,愿意支付房差费用￥3500
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content5">
+			<div class="content-part1">
+				<span class="shuoming">费用说明</span><span class="tuigai">退改规则</span>
+			</div>
+			<p class="num1">费用包含：</p>
+			<p class="num2">*+7x24小时优秀中/英双语自驾向导服务（国内出发，全程陪同）；</p>
+			<p class="num2">*+国内往返美国经济舱机票、燃油附加税、机票税；</p>
+			<p class="num2">*+包含好莱坞环球影城+17英里海岸门票；</p>
+			<p class="num2">*+美国当地钻酒店住宿；</p>
+			<a href="" class="num2"><p>阅读全部</p></a>
+		</div>
+		<div class="content6">
+			<div class="content-part1">
+				<span class="information">联系人信息</span>
+			</div>
+			<div class="content-part2">
+				<p>姓名<span class="blue3">*</span></p>
+				<input type="text" placeholder="请输入姓名">
+			</div>
+			<div class="content-part3">
+				<p>性别</p>
+				<div class="check1">
+					<input type="radio" name="sm" value="1" checked />&nbsp男
+				</div>
+				<div class="check2">
+					<input type="radio" name="sm" value="1"  />&nbsp女
+				</div>
+			</div>
+			<div class="content-part4">
+				<p>手机号码<span class="blue3">*</span></p>
+				<input type="text" placeholder="请输入手机号码">
+			</div>
+			<div class="content-part5">
+				<p>邮箱<span class="blue3">*</span></p>
+				<input type="text" placeholder="请输入邮箱">
+			</div>
+		</div>
+		<div class="content7">
+			<div class="content-part1">
+				<span class="visitor">游客信息</span>
+				<span class="label label-info change">常用游客</span>
+			</div>
+			<p class="onlypeople">游客1</p>
+			<div class="content-part2">
+				<p>游客类型</p>
+				<div class="check1">
+					<input type="radio" name="bn" value="1" checked/>&nbsp成人
+				</div>
+				<div class="check2">
+					<input type="radio" name="bn" value="1"  />&nbsp儿童
+				</div>
+			</div>
+			<div class="content-part3">
+				<p>姓名<span class="blue3">*</span></p>
+				<div class="btn-group">
+				  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    中文 <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu">
+				    <li><a href="#">English</a></li>
+				    <li><a href="#">Japanese</a></li>
+				    <li><a href="#">French </a></li>
+				  </ul>
+				</div>
+				<input type="text" placeholder="请输入姓名">
+			</div>
+			<div class="content-part4">
+				<p>性别</p>
+				<div class="check1">
+					<input type="radio" name="bm" value="1" checked />&nbsp男
+				</div>
+				<div class="check2">
+					<input type="radio" name="bm" value="1"  />&nbsp女
+				</div>
+			</div>
+			<div class="content-part5">
+				<p>手机号码</p>
+				<input type="text" placeholder="请输入手机号码">
+			</div>
+			<div class="content-part6">
+				<p>证件<span class="blue3">*</span></p>
+				<div class="btn-group">
+				  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    护照 <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu">
+				    <li><a href="#">English</a></li>
+				    <li><a href="#">Japanese</a></li>
+				    <li><a href="#">French </a></li>
+				  </ul>
+				</div>
+				<input type="text" placeholder="证件号码">
+			</div>
+			<hr>
+			<span class="label label-info  add">+ 添加游客</span>
+		</div>
+		<div class="content8">
+			<div class="content-part1">
+				<span class="visitor">保险</span>
+				<a href="" class="details"><span>详情></span></a>
+			</div>
+			<div class="check1">
+					<input type="radio" name="ym" value="1" checked /><span class="first">平安爱自驾境外长线保险 </span><span class="second">经典型2份</span><span class="third">￥177</span><span>/一份</span>
+			</div>
+			<hr class="hr2">
+			<div class="check1 check2">
+				<input type="radio" name="ym" value="1"  /><span class="first">平安爱自驾境外长线保险 </span><span class="second">经典型2份</span><span class="third">￥177</span><span>/一份</span><hr>
+			</div>
+		</div>
+		<div class="content9">
+			<div class="content-part1">
+				<span class="yuding">预订信息</span>
+			</div>
+			<div class="content-part2">
+				<p>发票信息：   &nbsp&nbsp&nbsp  是否需要发票：</p>
+				<div class="check1">
+					<input type="radio" name="bm" value="1" checked />&nbsp是
+				</div>
+				<div class="check2">
+					<input type="radio" name="bm" value="1"  />&nbsp否
+				</div>
+			</div>
+			<div class="content-part3">
+				<p>发票抬头：</p>
+				<input type="text" placeholder="请输入发票抬头">
+			</div>
+			<div class="content-part4">
+				<p>发票明细： </p>
+				<div class="btn-group">
+				  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    会议费 <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu">
+				    <li><a href="#">English</a></li>
+				    <li><a href="#">Japanese</a></li>
+				    <li><a href="#">French </a></li>
+				  </ul>
+				</div>
+			</div>
+			<div class="content-part5">
+				<p>配送地址：</p>
+				<input type="text" placeholder="请输入配送地址">
+			</div>
+			<hr class="hr3">
+			<div class="content-part6">
+				<p>更多要求>></p>
+			</div>
+		</div>
+		<div class="content10">
+			<p>总价：<span class="num1">1</span> x <span class="dollar">￥</span>5280 + <span class="num2">1</span> x <span class="dollar">￥</span>120 + <span class="num3">1</span> x <span class="dollar">￥</span>170 = <span class="dollar red">￥</span><span class="red num4">5570</span></p>
+			<div>
+				<input type="radio" name="bm" value="1" checked /><span class="agree">已阅读爱自驾条款，并同意</span>
+			</div>
+			<span class="label label-info change"><a href="online-pay.html">确认订单并提交</a></span>
+		</div>
+	</div>
+
+
+	<div id="footer">
+		<div class="footer-list">
+			<ul>
+				<li><a href="#">人民交通出版社</a></li>
+				<li><a href="#">爱自驾</a></li>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">友情链接</a></li>
+				<li><a href="#">爱自驾品牌店</a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+		<div class="copyright">
+			<span>人民交通出版社股份有限公司</span>
+			<span>京ICP备15018898号－1</span>
+			<span>开发团队 排雷组</span>
+		</div>
+	</div>
+	<SCRIPT TYPE="text/javascript" src="script/jquery-1.11.1.js"></SCRIPT>
+	<script type="text/javascript" src="script/bootstrap.min.js"></script>
+	<script type="text/javascript" src="script/domestic-list-leader-order/domestic-list-leader-order.js"></script>
+</body>
+</html>

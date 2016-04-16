@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>自驾团页面</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<script type="text/javascript" src="script/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="script/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="script/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="script/bootstrap.js"></script>
+<link href="style/Personal-Center/Personal-Center.css" rel="stylesheet">
+<link rel="stylesheet" href="style/bootstrap.css">
+<link rel="stylesheet" href="style/Personal-Center/dianji.css">
+</head>
+<body>
+		<div id="top">
+		<div class="top-box">
+			<div class="top-nav">
+				<ul class="nav-list nav-list-1">
+					<li class="top-list-nav list-1"><a href="#"><img src="images/nav-location.png" alt="location"></a></li>
+					<li class="top-list-nav list-2"><a href="#">北京</a></li>
+					<li class="top-list-nav list-3"><a id="cityChoice">切换</a>
+						<div id="city-add-box" style="display:none">
+							<p>全国：</p>
+							<ul id="city-list-1">
+								<li class="city-list-add">北京</li>
+								<li class="city-list-add">天津</li>
+								<li class="city-list-add">河北</li>
+								<li class="city-list-add">山西</li>
+								<li class="city-list-add">内蒙古</li>
+								<li class="city-list-add">辽宁</li>
+								<li class="city-list-add">吉林</li>
+								<li class="city-list-add">黑龙江</li>
+								<li class="city-list-add">上海</li>
+								<li class="city-list-add">江苏</li>
+								<li class="city-list-add">浙江</li>
+								<li class="city-list-add">安徽</li>
+								<li class="city-list-add">福建</li>
+								<li class="city-list-add">江西</li>
+								<li class="city-list-add">山东</li>
+								<li class="city-list-add">河南</li>
+								<li class="city-list-add">湖北</li>
+								<li class="city-list-add">湖南</li>
+								<li class="city-list-add">广东</li>
+								<li class="city-list-add">广西</li>
+								<li class="city-list-add">海南</li>
+								<li class="city-list-add">重庆</li>
+								<li class="city-list-add">四川</li>
+								<li class="city-list-add">贵州</li>
+								<li class="city-list-add">云南</li>
+								<li class="city-list-add">西藏</li>
+								<li class="city-list-add">陕西</li>
+								<li class="city-list-add">甘肃</li>
+								<li class="city-list-add">青海</li>
+								<li class="city-list-add">宁夏</li>
+								<li class="city-list-add">新疆</li>
+							</ul>
+						</div>
+					</li>
+					<li class="top-list-nav list-4"><a href="#"><img src="images/nav-phone.png" alt="location"></a></li>
+					<li class="top-list-nav list-5"><a href="#">下载手机<span>APP</span></a></li>
+				</ul>
+				<ul class="nav-list nav-list-2">
+					<li class="top-list-nav list-1"><a href="#"><img id="qq-png" src="images/nav-qq.png"></a></li>
+					<li class="top-list-nav list-2"><a href="#"><img id="sina-png" src="images/nav-sina.png"></a></li>
+					<li class="top-list-nav list-3"><a href="#" class="btn btn-primary btn-lg " data-toggle="modal" data-target="#myModal" id="btnId">登录</a></li>
+					<li class="top-list-nav list-4">｜</li>
+					<li class="top-list-nav list-5"><a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signIn" id="btnId"> 注册</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="top-nav-box">
+			<div class="top-navbar">
+				<div class="logo-img">
+					<img src="images/logo.png">
+				</div>
+				<div class="navbar">
+					<ul class="navbar-list">
+						<li><a href="#">首页</a></li>
+						<li><a href="#">目的地</a></li>
+						<li><a href="#">线路</a></li>
+						<li><a href="#">定制</a></li>
+						<li class="active"><a href="#">自驾团</a></li>
+						<li><a href="#">摄影</a></li>
+						<li><a href="#">互动</a></li>
+						<li><a href="#">精选</a></li>
+						<li><a href="#">预定</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 模态框 -->
+	<!-- Button to trigger modal -->
+	<div class="modal fade" id="myModal">
+  		<div class="modal-dialog modal-dialog-width">
+    		<div class="modal-content">
+      			<div class="modal-header">
+      				<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+      				<div class="modal-header-in">
+      					<img src="images/login-logo.gif" alt="">
+      				</div>
+
+     			  </div>
+            <div class="modal-body">
+            	<div class="modal-body-in">
+                <a href="#" data-toggle="modal" data-target="#VipLogin" data-dismiss="modal">会员登录</a>
+            		<input type="text" class="modal-body-input" placeholder="&nbsp;&nbsp;邮箱/手机/用户名">
+            		<input type="password" class="modal-body-input" placeholder="&nbsp;&nbsp;密码">
+            		<button type="button" class="btn btn-primary btn-login" data-dismiss="modal">登陆</button>
+            		<a href="#">忘记密码</a>
+            		<span class="free-signin">还没有账号？<a href="#" data-toggle="modal" data-target="#signIn" data-dismiss="modal">免费注册</a></span>
+                <div class="clear"></div>
+            		<div class="modal-footer-in">
+            			<div class="modal-footer-in-span"><span class="otherway-login">其他报名方式</span></div>
+            			<br>
+            			<button type="button" class="btn btn-primary not-login"  data-dismiss="modal">不登录，直接报名></button>
+            		</div>
+              </div>
+          </div>
+    		</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+  <div class="modal fade" id="signIn">
+    <div class="modal-dialog modal-dialog-width">
+      <div class="modal-content modal-content-signIn">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+          <div class="modal-header-in">
+            <img src="images/login-logo.gif" alt="爱自驾">
+          </div>
+        </div>
+        <div class="modal-body modal-body-signIn">
+          <a href="#" class="modal-body-signIn-byPhone">用手机注册</a>
+          <div class="clear"></div>
+          <input type="text" class="modal-body-signIn-input" placeholder="&nbsp;&nbsp;请输入邮箱">
+          <input type="password" class="modal-body-signIn-input" placeholder="&nbsp;&nbsp;密码">
+          <input type="password" class="modal-body-signIn-input" placeholder="&nbsp;&nbsp;设置密码">
+          <input type="password" class="modal-body-signIn-input" placeholder="&nbsp;&nbsp;输入密码">
+          <input type="text" class="modal-body-signIn-input" placeholder="&nbsp;&nbsp;输入邀请码，可不填">
+          <div class="modal-body-signIn-agreement">
+            <span>注册视为同意<a href="#">《爱自驾用户使用协议》</a></span>
+            <button type="button" class="btn btn-primary not-login"  data-dismiss="modal">注册</button>
+          </div>
+          <div class="modal-footer-in">
+            <div class="modal-footer-in-span"><span class="otherway-login">其他报名方式</span></div>
+            <br>
+            <button type="button" class="btn btn-primary not-login"  data-dismiss="modal">不登录，直接报名></button>
+          </div>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+
+  <div class="modal fade" id="VipLogin">
+    <div class="modal-dialog modal-dialog-Vip-width">
+      <div class="modal-content modal-content-Vip">
+        <div class="modal-left">
+          <div class="modal-left-header">
+            <span>会员登陆</span>
+          </div>
+          <div class="modal-left-contant">
+            <div class="modal-left-contant-sign">
+              <div class="modal-left-contant-sign-name">
+                <span>会员名：</span>
+              </div>
+              <div class="modal-left-contant-sign-password">
+                <span>登陆密码：</span>
+              </div>
+              <div class="modal-left-contant-sign-match">
+                <span>验证码：</span>
+              </div>
+            </div>
+            <div class="modal-left-contant-input">
+              <input type="text" class="modal-left-contant-input-name">
+              <input type="password" class="modal-left-contant-input-password">
+              <div class="modal-left-contant-input-match">
+                <span>点击显示</span>
+              </div>
+            </div>
+          </div>
+          <div class="modal-left-footer">
+            <input type="checkbox" class="modal-left-footer-checkbox">
+            <div class="modal-left-footer-checkbox-ex">
+              <span>两周内自动登陆</span>
+              <a href="#">忘记密码？</a>
+            </div>
+            <div class="clear"></div>
+            <div class="modal-left-footer-login">
+              <a href="#" data-toggle="modal" data-target="#signIn" data-dismiss="modal">没有用户名？立即注册！</a>
+              <button type="button" class="btn btn-primary"  data-dismiss="modal">立即登录</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-right">
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+          <div class="modal-right-contant">
+            <span>非会员预定</span>
+            <button type="button" class="btn btn-primary"  data-dismiss="modal">不登录，直接预定></button>
+          </div>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+
+
+
+
+	<!-- banner -->
+	<div id="banner">
+		<div class="banner-iner">
+			<div class="banner-inerData">
+				<div class="Personal-Sig"><span>浮生若梦_JAKy</span></div>
+				<div class="banner-setBox">
+					<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span><span class="setSig"><a href="">修改资料</a></span>
+				</div>
+				<!-- 关注部分 -->
+				<div class="banner-carful">
+					<div class="carfulLeft">
+						<div class="carfulNum-1"><span>0</span></div>
+						<div class="carFul-1"><span>关注</span></div>
+					</div>
+					<div class="carfulRight">
+						<div class="carfulNum-2"><span>0</span></div>
+						<div class="carFul-2"><span>粉丝</span></div>
+					</div>
+				</div>
+			</div>
+			<!-- banner的二维码 -->
+			<div class="QR-code">
+					<img src="images/Personal-Center/banner-2.jpg">
+					<span class="QR-code-1">
+						扫一扫，关注我
+					</span>
+				</div>
+			<div class="sendPhotos">
+				<a href=""><img src="images/Personal-Center/xiangji.jpg"></a>
+				<div class="word"><span>发布图片</span></div>
+			</div>
+			<div class="sendControl">
+				<a href=""><img src="images/Personal-Center/wendang.jpg"></a>
+				<div class="word"><span>管理互动</span></div>
+			</div>
+		</div>
+
+	</div>
+	<!-- content -->
+	<div id="content">
+		<div class="content-iner">
+			<div class="content-iner-1">
+				<span class="myOrder">我的订单</span>
+				<ul class="myOrder-list-1">
+					<li class="list-1">全部订单</li>
+					<li class="list-1">待出行</li>
+					<li class="list-1">待支付</li>
+					<li class="list-1">待评价</li>
+					<li class="list-1">已取消</li>
+				</ul>
+			</div>
+			<div class="content-iner-2">
+				<div class="content-iner-2-1">
+					<select class="area-1">
+						<option value="0">按条件</option>
+						<option value="1">待出行</option>
+						<option value="2">已出行</option>
+						<option value="3">待支付</option>
+					</select>
+				</div>
+				<div class="content-iner-2-2">
+					<input type="text" class="condintAfter">
+				</div>
+				<div class="content-iner-2-3">
+					<select class="area-2">
+						<option value="0">状态</option>
+						<option value="1">待出行</option>
+						<option value="2">已出行</option>
+						<option value="3">待支付</option>
+					</select>
+				</div>
+				<div class="content-iner-2-4">
+					<img src="images/Personal-Center/rili.jpg" class="content-iner-2-4-Img-1">
+
+				</div>
+				<div class="content-iner-2-5">
+					<input type="text" class="condintAfter" placeholder="单号">
+				</div>
+				<div class="content-iner-2-6">
+					<div class="zhi">至</div>
+					<img src="images/Personal-Center/rili.jpg" class="content-iner-2-6-Img-2">
+				</div>
+				<div class="content-iner-2-7">
+					<input type="text" class="condintAfter" placeholder="单号">
+				</div>
+				<div class="content-iner-2-8">
+						<span><a href="" class="lianjie">搜索</a></span>
+				</div>
+			</div>
+			<!-- 第三个盒子 -->
+			<div class="content-iner-3">
+				<ul class="myOrder-list-3">
+					<li class="lis-3-1">订单详情</li>
+					<li class="lis-3-2">产品类型</li>
+					<li class="lis-3-3">出游日期</li>
+					<li class="lis-3-4">订单金额</li>
+					<li class="lis-3-5">订单状态</li>
+					<li class="lis-3-6">操作</li>
+				</ul>
+			</div>
+			<div class="content-iner-4">
+				<span class="content-iner-4-num">订单编号：7195351 预订时间：2015-12-29 12:04:00</span>
+			</div>
+			<div class="content-iner-5">
+				<div class="content-iner-5-1">
+					<img src="images/Personal-Center/content-1.jpg" class="content-iner-img">
+				</div>
+				<div class="content-iner-5-2">
+					<span class="content-iner-brief">[春节]<魅力湘西过大年>
+					湘西年夜饭，北京直飞</span>
+				</div>
+				<div class="content-iner-5-3">
+					<span class="content-ine-mold">自驾游</span>
+				</div>
+				<div class="content-iner-5-4">
+						<span>2016-02-17</span>
+				</div>
+				<div class="content-iner-5-5">
+						<span>￥4580</span>
+				</div>
+				<div class="content-iner-5-6">
+						<span>待出行</span>
+				</div>
+				<div class="content-iner-5-7">
+					<select class="area">
+						<option value="0">取消</option>
+						<option value="1">支付</option>
+						<option value="2">代付</option>
+						<option value="3">查看</option>
+					</select>
+				</div>
+			</div>
+			<div class="content-iner-6">
+				<span class="content-iner-4-num">订单编号：7195351 预订时间：2015-12-25 12:04:00</span>
+			</div>
+			<div class="content-iner-7">
+				<div class="content-iner-7-1">
+					<img src="images/Personal-Center/content-2.jpg" class="content-iner-img">
+				</div>
+				<div class="content-iner-7-2">
+					<span class="content-iner-brief">[5月]<阿尔山童话世界冰
+					雪温泉之旅>北京直飞....</span>
+				</div>
+				<div class="content-iner-7-3">
+					<span class="content-ine-mold">自驾游</span>
+				</div>
+				<div class="content-iner-7-4">
+						<span>2016-05-7</span>
+				</div>
+				<div class="content-iner-7-5">
+						<span>￥4580</span>
+				</div>
+				<div class="content-iner-7-6">
+						<span>待支付</span>
+				</div>
+				<div class="content-iner-7-7">
+					<select class="area">
+						<option value="0">支付</option>
+						<option value="1">取消</option>
+						<option value="2">代付</option>
+						<option value="3">查看</option>
+					</select>
+				</div>
+			</div>
+			<div class="content-iner-8">
+				<span class="content-iner-4-num">订单编号：7195351 预订时间：2015-12-25 12:04:00</span>
+			</div>
+			<div class="content-iner-9">
+				<div class="content-iner-9-1">
+					<img src="images/Personal-Center/content-3.jpg" class="content-iner-img">
+				</div>
+				<div class="content-iner-9-2">
+					<span class="content-iner-brief">[4月]<海南海岛环驾8日
+					自驾之旅>海口直飞..</span>
+				</div>
+				<div class="content-iner-9-3">
+					<span class="content-ine-mold">自驾游</span>
+				</div>
+				<div class="content-iner-9-4">
+						<span>2016-04-07</span>
+				</div>
+				<div class="content-iner-9-5">
+						<span>￥4580</span>
+				</div>
+				<div class="content-iner-9-6">
+						<span>待评价</span>
+				</div>
+				<div class="content-iner-9-7">
+					<select class="area">
+						<option value="0">点评</option>
+						<option value="1">删除</option>
+						<option value="3">查看</option>
+					</select>
+				</div>
+			</div>
+			<div class="content-iner-10">
+				<span class="content-iner-4-num">订单编号：7195351 预订时间：2015-12-25 12:04:00</span>
+			</div>
+			<div class="content-iner-11">
+				<div class="content-iner-11-1">
+					<img src="images/Personal-Center/content-4.jpg" class="content-iner-img">
+				</div>
+				<div class="content-iner-11-2">
+					<span class="content-iner-brief">[4月]<海南海岛环驾8日
+					自驾之旅>海口直飞..</span>
+				</div>
+				<div class="content-iner-11-3">
+					<span class="content-ine-mold">自驾游</span>
+				</div>
+				<div class="content-iner-11-4">
+						<span>2016-04-07</span>
+				</div>
+				<div class="content-iner-11-5">
+						<span>￥4580</span>
+				</div>
+				<div class="content-iner-11-6">
+						<span>已取消</span>
+				</div>
+				<div class="content-iner-11-7">
+					<select class="area">
+						<option value="0">查看</option>
+						<option value="1">删除</option>
+					</select>
+				</div>
+			</div>
+			<div class="content-iner-12">
+				<span>加载更多</span>
+			</div>
+		</div>
+	<!-- 	我的收藏 -->
+		<div class="myCollection">
+			<div class="myCollection-1">
+				<span class="CollectionWord">我的收藏</span>
+				<ul class="wordList-1">
+					<li><a href="">看点</a></li>
+					<li><a href="">停车发呆地</a></li>
+					<li><a href="">高德地图点</a></li>
+					<li><a href="">私享点</a></li>
+					<li><a href="">路线</a></li>
+					<li><a href="">自驾团</a></li>
+				</ul>
+
+			</div>
+			<div class="myCollection-2">
+				<span class="No">暂无收藏看点</span>
+				<span class="Route">我的路线</span>
+			</div>
+			<div class="myCollection-3">
+				<span class="NoRoute">暂无路线数据</span>
+				<span class="Fleet">我的车队</span>
+			</div>
+			<!-- 添加新标签 -->
+			<div class="myCollection-4">
+				<div class="newFleet">
+					<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					<span class="fleetWord"><a href="">新建车队</a></span>
+				</div>
+				<span class="myPhoto">我的照片</span>
+				<ul class="listPhoto">
+					<li class="Photo">照片</li>
+				</ul>
+			</div>
+			<div class="myCollection-5">
+				<div class="sendPic">
+					<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					<span class="picWord"><a href="#send-box" id="btn">上传照片</a></span>
+				</div>
+				<div class="chuangjian">
+					<span class="chuangjianWord"><a href="">创建相册</a></span>
+				</div>
+				<div class="clear"></div>
+				<!-- 分享专属 -->
+				<div class="share">
+					<a href=""><img src="images/Personal-Center/content-5.jpg"></a>
+					<span class="shareWord">分享专属</span>
+				</div>
+				<!-- 弹出框 -->
+				<div id="send-box" style="display:none">
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- footer -->
+	<div id="footer">
+		<div class="footer-list">
+			<ul>
+				<li><a href="#">人民交通出版社</a></li>
+				<li><a href="#">爱自驾</a></li>
+				<li><a href="#">联系我们</a></li>
+				<li><a href="#">友情链接</a></li>
+				<li><a href="#">爱自驾品牌店</a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+		<div class="copyright">
+			<span>人民交通出版社股份有限公司</span>
+			<span>京ICP备15018898号－1</span>
+			<span>开发团队 排雷组</span>
+		</div>
+	</div>
+
+	<!-- 背影颜色改变 -->
+	<script type="text/javascript">
+	$(".myOrder-list-1 li").mouseenter(function(){
+			$(this).addClass("bottBlue");
+		});
+		$(".myOrder-list-1 li").mouseleave(function(){
+			$(this).removeClass("bottBlue");
+		});
+		// 我的收藏里面的内容下滑线
+		$(".wordList-1 li").mouseenter(function(){
+			$(this).addClass("bottBlue");
+		});
+		$(".wordList-1 li").mouseleave(function(){
+			$(this).removeClass("bottBlue");
+		});
+		//点击出现上传照片的弹出框
+			var oBtn = document.getElementById('btn')
+			var oDiv = document.getElementById("send-box");
+			oBtn.onclick=function(){
+				if(oDiv.style.display=="none"){
+					oDiv.style.display="block";
+				}else{
+					oDiv.style.display="none"
+				}
+			}
+		//点击切换城市
+		var myBtn = document.getElementById("cityChoice");
+		var myDiv = document.getElementById("city-add-box")
+
+		document.body.onclick = function(e){
+			var target = e.target;
+			if (target != myBtn) {
+				myDiv.style.display = "none";
+			};
+		}
+		$("#cityChoice").click(function(){
+		$("#city-add-box").toggle();
+	})
+
+	$("#city-list-1").find("li").click(function(){
+		var city = $(this).text();
+		$("#top .nav-list-1 .list-2 a").text(city);
+	});
+	</script>
+</body>
+</html>
