@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>日历</title>
+	<link rel="stylesheet" href="style/fullcalendar.css">
+	<link rel="stylesheet" href="style/fullcalendar.print.css" media='print'>
+	<script src='js/moment.min.js'></script>
+	<script src='js/jquery.min.js'></script>
+	<script src='js/fullcalendar.js'></script>
+	<link rel="stylesheet" href="style/main.css">
+	<script>
+
+		$(document).ready(function() {
+
+			$('#calendar').fullCalendar({
+				// defaultDate: '2016-04-12',
+				editable: true,
+				eventLimit: true,
+				header: {
+					left: 'prev',
+					center: 'title',
+					right: 'next,',
+				},
+				events: [
+				{
+					title: '3259元',
+					start: '2016-04-22'
+				},
+				{
+					title: '3259元',
+					start: '2016-04-23',
+				},
+				{
+					title: '3259元',
+					start: '2016-04-24'
+				},
+				{
+					title: '3259元',
+					start: '2016-04-25'
+				},
+				{
+					title: '3259元',
+					start: '2016-04-26'
+				},
+				{
+					title: '报名截止',
+					start: '2016-04-27'
+				},
+				{
+					title: '活动结束',
+					start: '2016-04-28'
+				}
+			],
+				dayClick: function() {
+	        alert('a day has been clicked!');
+		    },
+			// 	// buttonIcons:false,
+			// 	//today,month,agendaWeek,agendaDay
+			// 	// weekends: false,隐藏周末
+			});
+			var myEvent = ['2016-04-22','2016-04-23','2016-04-24','2016-04-25','2016-04-26',];
+			// console.log(myEvent[0]);
+			function setMyEvent(){
+				for (var i = 0; i < myEvent.length; i++) {
+					var mySelector = '.fc-widget-content.fc-future' + '[data-date="' + myEvent[i] + '"]';
+					$(mySelector).css('position', 'relative').append('<img src="images/jian-logo.png" class="jian-logo">').append('<span class="time-atonce">实时</span>');
+				}
+			}
+			setMyEvent();
+			//这个显示today的问题解决了，在5188行，搜索‘自己修改’
+			function setWeek() {    //修改week显示函数
+				$('.fc-day-header.fc-sun').text('日');
+				$('.fc-day-header.fc-mon').text('一');
+				$('.fc-day-header.fc-tue').text('二');
+				$('.fc-day-header.fc-wed').text('三');
+				$('.fc-day-header.fc-thu').text('四');
+				$('.fc-day-header.fc-fri').text('五');
+				$('.fc-day-header.fc-sat').text('六');
+			}
+			setWeek();
+			$('.fc-prev-button,.fc-next-button').click(function() {
+				setWeek();
+				setMyEvent();
+			});
+
+			function setTitle() {  //修改标题显示问题
+				var myMonthName = ['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'];
+				var myMonth = new Date();
+				var myMonthNum = Number(myMonth.getMonth());
+				var myYearNum = Number(myMonth.getFullYear());
+				$('.fc-center h2').text(myMonthName[myMonthNum] + myYearNum);
+				$('.fc-prev-button').click(function() {
+					if (myMonthNum > 0) {
+						myMonthNum --;
+						$('.fc-center h2').text(myMonthName[myMonthNum] + myYearNum);
+					} else {
+						myMonthNum = 11;
+						myYearNum --;
+						$('.fc-center h2').text(myMonthName[myMonthNum] + myYearNum);
+					}
+				});
+				$('.fc-next-button').click(function() {
+					if (myMonthNum > 10) {
+						myMonthNum = 0;
+						myYearNum ++;
+						$('.fc-center h2').text(myMonthName[myMonthNum] + myYearNum);
+					} else {
+						myMonthNum ++;
+						$('.fc-center h2').text(myMonthName[myMonthNum] + myYearNum);
+					}
+				});
+			}
+			setTitle();
+
+		});
+	</script>
+</head>
+<body>
+	<div id='calendar'></div>
+</body>
+</html>

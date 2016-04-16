@@ -63,7 +63,6 @@
                 textspan = '<span class="city-picker-span" style="' +
                     this.getWidthStyle(p.width) + 'height:' +
                     p.height + 'px;line-height:' + (p.height - 1) + 'px;">' +
-                    (placeholder ? '<span class="placeholder">' + placeholder + '</span>' : '') +
                     '<span class="title"></span><div class="arrow"></div>' + '</span>',
 
                 dropdown = '<div class="city-picker-dropdown" style="left:0px;top:100%;' +

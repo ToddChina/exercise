@@ -13,6 +13,10 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 *{
 	padding: 0;
 	margin: 0;
+	font-family: 微软雅黑;
+}
+li{
+	list-style: none;
 }
 .clear{
 	clear: both;
@@ -20,44 +24,53 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 #top{
 	min-width: 1000px;
 	height: 125px;
-	background-color: #244d5f;
 	font-family: MicrosoftYaHei-Regular;
+}
+#top .top-box{
+	height: 45px;
+	background-color: #244d5f;
 }
 #top .top-nav{
 	width: 1000px;
 	height: 45px;
 	margin: 0 auto;
-
+	color: #244d5f;
 }
-/*#top .top-nav span{
-	line-height: 45px;
-}*/
+#top .top-nav-box{
+	height: 80px;
+	min-width: 1000px;
+	border-bottom: 1px solid #eeeeee;
+}
 
 #top .top-nav a{
 	text-decoration: none;
 	color: #fff;
 	font-size: 16px;
 }
-#top .top-nav ul{
+#top .top-nav .nav-list-1{
 	float: left;
 	list-style: none;
 	height: 20px;
 }
-#top .top-nav ul li{
+#top .top-nav .nav-list .top-list-nav{
 	float: left;
 	margin-top: 11px;
 }
-#top .top-nav ul li a{
+#top .top-nav .nav-list .top-list-nav a{
 	line-height: 20px;
+	cursor: pointer;
 }
-#top .top-nav ul li a:hover{
+#top .top-nav .nav-list .top-list-nav a:hover{
 	color: #cecccc;
 }
 #top .top-nav .nav-list-1 .list-2{
 	margin-left: 13px;
+	width: 50px;
+	font-size: 16px;
+	color: #fff;
 }
 #top .top-nav .nav-list-1 .list-3{
-	margin-left: 16px;
+	margin-left: 5px;
 }
 #top .top-nav .nav-list-1 .list-4{
 	margin-left: 75px;
@@ -73,7 +86,7 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	margin-right: 1px;
 }
 #top .top-nav .nav-list-2 .list-4{
-	margin: 13px 10px;
+	margin: 10px 10px;
 	color: #fff;
 	font-size: 16px;
 }
@@ -84,31 +97,28 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	margin-right: 15px;
 	margin-top: 10px;
 }
-#top .top-nav-box{
-	width: 100%;
-	height: 80px;
-	background-color: #fff;
-	font-size: 16px;
-	font-family: MicrosoftYaHei-Regular;
-	border-bottom: 1px solid #eeeeee;
-}
+
 #top .top-navbar{
 	width: 1000px;
 	height: 80px;
 	margin: 0 auto;
-
 }
 #top .top-navbar .logo-img{
 	float: left;
+	margin-top: 8px;
 }
 #top .top-navbar .logo-img img{
-	margin-top: 8px;
+	display: block;
+	float: left;
 }
 #top .top-navbar .navbar{
 	float: right;
 }
 #top .top-navbar .navbar ul{
 	list-style: none;
+	height: 80px;
+	line-height: 80px;
+	margin-top: -9px;
 }
 #top .top-navbar .navbar ul li{
 	float: left;
@@ -119,7 +129,7 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	color: #333333;
 	font-size: 16px;
 	display: block;
-	height: 79px;
+	height: 80px;
 	line-height: 80px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -130,7 +140,6 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	border-bottom: 1px solid #7d7a79;
 }
 #banner{
-
 	/*background-color: red;*/
 	height: 150px;
 	width: 100%;
@@ -142,7 +151,6 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	height: 1595px;
 }
 #container .container-top{
-
 	width: 1000px;
 	height: 273px;
 	margin-top: 43px;
@@ -159,48 +167,67 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	float: left;
 	margin-top: 25px;
 	line-height: 36px;
-	font-family: MicrosoftYaHei-Regular-bd;
-
 }
 .container-top .container-top-1 span{
 	font-size: 24px;
 	margin-left: 5px;
 	color: #333333;
-
 }
 .container-top-1 .required{
 	font-size: 16px;
 	display: inline;
 	margin-left: 5px;
 	color: #999999;
-
+}
+#container .container-top-2 label{
+	color: #6fc5e0;
+	height: 37px;
+	width: 70px;
+	display: block;
+	float: left;
+}
+#container .container-top-2 label span{
+	float: right;
+}
+#container .container-top-2 input{
+	float: left;
+	margin-top: 2px;
 }
 #container .container-top-2{
-	width: 300px;
+	width: 700px;
 	height: 200px;
 	margin-top: 73px;
 	color: #414141;
 	margin-left: 258px;
-	font-family: MicrosoftYaHei-Regular-bd;
-}
-.container-top-2 #topForm p{
-	height: 37px;
-	line-height: 37px;
-	margin-bottom: 25px;
-	float: right;
 	font-size: 16px;
-
+}
+.container-top-2 #topForm{
+	width: 700px;
+}
+.container-top-2 #topForm .NameMsg,.phNum,.emailNum{
+	float: left;
+	margin-left: 10px;
+	width: 300px;
+	display: none;
+	color: red;
+}
+.container-top-2 #topForm .topForm-1,.topForm-2,.topForm-3{
+	height: 37px;
+	width: 700px;
+	float: left;
+    line-height: 37px;
+	margin-bottom: 25px;
+	font-size: 16px;
 }
 #container .container-top input{
 	width: 214px;
 	height: 33px;
-	margin-left: 13px;
+	margin-left: 10px;
 	line-height: 33px;
 	padding-left: 10px;
 }
 /*中间的基本信息的内容container-center*/
 #container .container-center{
-
 	width: 1000px;
 	height: 511px;
 	margin-top: 35px;
@@ -217,21 +244,17 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	float: left;
 	margin-top: 25px;
 	line-height: 36px;
-	font-family: MicrosoftYaHei-Regular-bd;
-
 }
 .container-center .container-center-1 span{
 	font-size: 24px;
 	margin-left: 13px;
 	color: #333333;
-
 }
 .container-center-1 .required{
 	font-size: 16px;
 	display: inline;
 	margin-left: 5px;
 	color: #999999;
-
 }
 /*中间基本信息填写的表单*/
 #container .container-center-2{
@@ -241,9 +264,7 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	font-size: 16px;
 	color: #414141;
 	margin-left: 258px;
-	font-family: MicrosoftYaHei-Regular-bd;
 }
-
 /*出游的性质是一个盒子里面有span和ul*/
 .container-center-2-top{
 	height: 33px;
@@ -256,6 +277,16 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	margin-right: 335px;
 	margin-bottom: 24px;
 	display: inline;
+}
+/*公司的背景色*/
+.container-center-2-list .centerli-1{
+	background-color:#50bbdb;
+}
+.centerli-1 a{
+	color: #fff
+}
+.centerli-2 a{
+	color: #5d5d5d;
 }
 .container-center-2-list li{
 	width: 105px;
@@ -272,8 +303,6 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	height: 37px;
 	line-height: 37px;
 	margin-bottom: 25px;
-
-
 }
 .container-center-2 #starWhere,#goWhere{
 	width: 214px;
@@ -286,7 +315,6 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 }
 /*出发日期的盒子*/
 .box-3{
-
 	clear: both;
 	float: right;
 	margin-right: 120px;
@@ -322,8 +350,7 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	padding-left: 8px;
 }
 /*boot标图*/
-.danxuan
-{
+.danxuan{
 	padding-left: 10px;
 	padding-right: 10px;
 }
@@ -345,7 +372,6 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	padding-left: 10px;
 }
 .box-5 .playPerson,.playChild{
-
 	padding-left: 10px;
 }
 .container-center-2 #centerForm .box-6{
@@ -355,7 +381,6 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	height: 37px;
 	line-height: 37px;
 	margin-bottom: 25px;
-
 }
 .container-center-2 #aveBuget{
 	width: 214px;
@@ -370,7 +395,6 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 #container .container-bottom{
 	width: 1000px;
 	height: 613px;
-
 	margin-top: 43px;
 	border: 1px solid #eee;
 }
@@ -385,21 +409,17 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	float: left;
 	margin-top: 25px;
 	line-height: 36px;
-	font-family: MicrosoftYaHei-Regular-bd;
-
 }
 .container-bottom .container-bottom-1 span{
 	font-size: 24px;
 	margin-left: 10px;
 	color: #333333;
-
 }
 .container-bottom-1 .required{
 	font-size: 16px;
 	display: inline;
 	margin-left: 5px;
 	color: #999999;
-
 }
 .container-bottom .container-bottom-2{
 	margin-top: 15px;
@@ -411,7 +431,6 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 .bottom-list-1,.bottom-list-2,.bottom-list-3{
 	width: 600px;
 	height: 37px;
-	/*background-color: yellow;*/
 	margin-bottom: 24px;
 }
 .container-bottom-2 li{
@@ -425,8 +444,8 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	float: left;
 }
 .bottom-list-1 .smali{
-
 	border: 1px solid #eee;
+	background-color: #fff
 }
 .bottom-list-1 .smali-1{
 	background-color: #50bbdb;
@@ -439,11 +458,10 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	text-align: center;
 	margin-left: 13px;
 	float: left;
-
 }
 .bottom-list-2 .smali{
-
 	border: 1px solid #eee;
+	background-color: #fff
 }
 .bottom-list-2 .smali-2{
 	background-color: #50bbdb;
@@ -459,10 +477,11 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 }
 .bottom-list-3 .smali{
 	border: 1px solid #eee;
+	background-color: #fff
 }
 .bottom-list-3 .smali-3{
 	background-color: #50bbdb;
-	border: 1px solid #eee;
+	border: 1px solid #cccccc;
 }
 .bottom-list-3 .smali,.smali-3{
 	width: 90px;
@@ -475,14 +494,17 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 .bottom-list-4{
 	height: 200px;
 	width: 600px;
-
-
 }
-.bottom-list-4 .smali-4{
+.bottom-list-4 .smali-4 textarea{
 	width: 513px;
 	height: 200px;
+	line-height: 10px;
 	margin-left: 13px;
 	float: left;
+}
+.bottom-list-4 .smali-4 #texWord{
+	margin-top: 10px;
+	line-height: 30px;
 	border: 1px solid #eee;
 }
 /*提交按钮*/
@@ -499,7 +521,6 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	min-width: 1000px;
 	background-color: #444b55;
 	height: 50px;
-	font-family: MicrosoftYaHei-Regular;
 }
 #footer .footer-list ul{
 	width: 1000px;
@@ -507,7 +528,6 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 	height: 50px;
 	margin: 0 auto;
 }
-
 #footer .footer-list ul li{
 	float: left;
 	margin: 0 60px;
@@ -520,13 +540,6 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../../fonts/msyhbd.ttf);
 #footer .footer-list ul li a:hover{
 	color: #cecccc;
 }
-
-
-
-
-
-
-
 #footer .copyright{
 	height: 40px;
 	background-color: #565d65;

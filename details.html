@@ -8,7 +8,7 @@
 <meta name="keywords" content="">
 <script type="text/javascript" src="script/jquery-1.12.0.min.js"></script>
 <script type="text/javascript" src="script/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="script/bootstrap.js"></script>
+<!-- <script type="text/javascript" src="script/bootstrap.js"></script> -->
 <link rel="stylesheet" type="text/css" href="style/bootstrap.css">
 
 
@@ -17,24 +17,71 @@
 <link href="css/city-picker.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" type="text/css" href="css/hzw-city-picker.css">
 
+<!-- 星级评价 -->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css"> -->
+	<link rel="stylesheet" type="text/css" href="src/css/star-rating-svg.css">
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+
+	<!-- 模态框 -->
+	<!-- <link rel="stylesheet" type="text/css" href="modal/css/bootstrap.css"> -->
+	<!-- 获取所在位置百度地图API -->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=tcllgj@163.com"></script>
 </head>
 <body>
 	<div id="top">
 		<div class="top-box">
 			<div class="top-nav">
-				<ul class="nav-list-1">
-					<li class="list-1"><a href="#"><img src="images/nav-location.png" alt="location"></a></li>
-					<li class="list-2"><a href="#">北京</a></li>
-					<li class="list-3"><a id="cityChoice">切换</a></li>
-					<li class="list-4"><a href="#"><img src="images/nav-phone.png" alt="location"></a></li>
-					<li class="list-5"><a href="#">下载手机<span>APP</span></a></li>
+				<ul class="nav-list nav-list-1">
+					<li class="top-list-nav list-1"><a href="#"><img src="images/nav-location.png" alt="location"></a></li>
+					<li class="top-list-nav list-2"><a id="atCity" href="#">北京</a></li>
+					<li class="top-list-nav list-3"><a id="cityChoice">切换</a>
+						<div id="city-add-box">
+							<p>全国：</p>
+							<ul id="city-list-1">
+								<li class="city-list-add">北京</li>
+								<li class="city-list-add">天津</li>
+								<li class="city-list-add">河北</li>
+								<li class="city-list-add">山西</li>
+								<li class="city-list-add">内蒙古</li>
+								<li class="city-list-add">辽宁</li>
+								<li class="city-list-add">吉林</li>
+								<li class="city-list-add">黑龙江</li>
+								<li class="city-list-add">上海</li>
+								<li class="city-list-add">江苏</li>
+								<li class="city-list-add">浙江</li>
+								<li class="city-list-add">安徽</li>
+								<li class="city-list-add">福建</li>
+								<li class="city-list-add">江西</li>
+								<li class="city-list-add">山东</li>
+								<li class="city-list-add">河南</li>
+								<li class="city-list-add">湖北</li>
+								<li class="city-list-add">湖南</li>
+								<li class="city-list-add">广东</li>
+								<li class="city-list-add">广西</li>
+								<li class="city-list-add">海南</li>
+								<li class="city-list-add">重庆</li>
+								<li class="city-list-add">四川</li>
+								<li class="city-list-add">贵州</li>
+								<li class="city-list-add">云南</li>
+								<li class="city-list-add">西藏</li>
+								<li class="city-list-add">陕西</li>
+								<li class="city-list-add">甘肃</li>
+								<li class="city-list-add">青海</li>
+								<li class="city-list-add">宁夏</li>
+								<li class="city-list-add">新疆</li>
+							</ul>
+						</div>
+					</li>
+					<li class="top-list-nav list-4"><a href="#"><img src="images/nav-phone.png" alt="location"></a></li>
+					<li class="top-list-nav list-5"><a href="#">下载手机<span>APP</span></a></li>
 				</ul>
-				<ul class="nav-list-2">
-					<li class="list-1"><a href="#"><img src="images/nav-qq.png"></a></li>
-					<li class="list-2"><a href="#"><img src="images/nav-sina.png"></a></li>
-					<li class="list-3"><a href="#">登录</a></li>
-					<li class="list-4">｜</li>
-					<li class="list-5"><a href="#"> 注册</a></li>
+				<ul class="nav-list nav-list-2">
+					<li class="top-list-nav list-1"><a href="#"><img id="qq-png" src="images/nav-qq.png"></a></li>
+					<li class="top-list-nav list-2"><a href="#"><img id="sina-png" src="images/nav-sina.png"></a></li>
+					<li class="top-list-nav list-3"><a data-toggle="modal" data-target="#myModal">登录</a></li>
+					<li class="top-list-nav list-4">｜</li>
+					<li class="top-list-nav list-5"><a data-toggle="modal" data-target="#signIn"> 注册</a></li>
 				</ul>
 			</div>
 		</div>
@@ -84,7 +131,7 @@
 				<center>
 					<div class="membder-background addMemo-body">
 						<div class="addMemo" id="iframe">
-							<iframe src="iframe.html" id="iframepage" name="iframe" frameborder="0" scrolling="no"></iframe>
+							<iframe src="date.html" id="idate" name="idate" frameborder="0" scrolling="no"></iframe>
 						</div>
 					</div>
 				</center>
@@ -114,40 +161,52 @@
 							<li class="info-collection"><a href="">收藏</a></li>
 						</ul>
 						<ul class="input-list">
-							<li class="list-date">
+							<li class="input-list-1 list-date">
 								出游日期：
 								<input class="text-style" type="date" placeholder=" 请选择出发日期"><a href="#">
 									<!-- <span class="glyphicon glyphicon-triangle-bottom"> -->
 								</a>
 								</span>
 							</li>
-							<li class="list-add">
+							<li class="input-list-1 list-add">
 								出发城市：
-								<input id="city-picker3" class="form-control text-style" readonly type="text" value="北京市" data-toggle="city-picker">
+								<input class="form-control text-style" readonly type="text" value="" data-toggle="city-picker">
 							</li>
-							<li class="list-num">
+							<li class="input-list-1 list-num">
 								<ul>
 									<li>
 										出游人数：
 										<div class="btn-group" role="group" aria-label="人数">
-											<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-minus"></span></button><input type="text" class="btn-text btn btn-default" value="1"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
+											<button id="btn-cut-1" type="button" class="btn btn-default">
+												<span class="glyphicon glyphicon-minus"></span>
+											</button>
+											<input type="text" id="text-num-1" class="btn-text btn btn-default" value="1">
+											<button id="btn-add-1" type="button" class="btn btn-default">
+												<span class="glyphicon glyphicon-plus"></span>
+											</button>
 										</div>
 										<span class="num-people">成人</span>
 									</li>
 									<li>
 										<div class="btn-group" role="group" aria-label="人数">
-											<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-minus"></span></button><input type="text" class="btn-text btn btn-default" value="0"><button type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></button>
+											<button id="btn-cut-2" type="button" class="btn btn-default">
+												<span class="glyphicon glyphicon-minus"></span>
+											</button>
+											<input id="text-num-2" type="text" class="btn-text btn btn-default" value="0">
+											<button id="btn-add-2" type="button" class="btn btn-default">
+												<span class="glyphicon glyphicon-plus"></span>
+											</button>
 										</div>
 										<span class="num-people">儿童</span>
 									</li>
 									<li class="standard"><a href="">儿童标准</a></li>
 								</ul>
 							</li>
-							<li class="list-details">形成概要：
+							<li class="input-list-1 list-details">形成概要：
 								<span class="list-city">昆明—建水—元阳—元江—玉溪—东川—昆明</span>
 								<span class="list-info"><a href="#summary">详情&gt;&gt;</a></span>
 							</li>
-							<li class="list-title">
+							<li class="input-list-1 list-title">
 								<span class="img-boy"></span>
 								<span class="img-arrow"></span>
 								<span class="title">量身定制 专属行程 独立包团</span>
@@ -183,9 +242,9 @@
 				<h3>历史组团</h3>
 			</div>
 			<div class="history-bottom">
-				<div class="left"><a href=""><span class="glyphicon glyphicon-menu-left"></span></a></div>
+				<div class="left"><span id="history-btn-left" class="glyphicon glyphicon-menu-left"></span></div>
 				<div class="play-img">
-					<ul class="img-view">
+					<ul id="history-view" class="img-view">
 						<li class="view-list">
 							<img src="images/details/user-img-6.jpg">
 							<p class="list-info">海天佛国 普陀山祈福之旅</p>
@@ -229,7 +288,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="right"><a href=""><span class="glyphicon glyphicon-menu-right"></span></a></div>
+				<div class="right"><span id="history-btn-right" class="glyphicon glyphicon-menu-right"></span></div>
 			</div>
 		</div>
 		<div class="center-bottom">
@@ -332,9 +391,187 @@
 					</ul>
 				</div>
 				<div class="body-center">
-					<p id="summary-3">用户评论</p>
-					<p>全部点评(15) 100 35</p>
+					<p id="summary-4">用户评论</p>
+					<p class="body-center-top-1">全部点评(15)</p>
+					<p class="body-center-top-2">综合评价：</p>
+					<ul id="comment-star">
+						<div class="my-rating"></div>
+<!-- 						<li class="set-star star1"><img src="images/details/star-k.png" alt="star"></li>
+						<li class="set-star star2"><img src="images/details/star-k.png" alt="star"></li>
+						<li class="set-star star3"><img src="images/details/star-k.png" alt="star"></li>
+						<li class="set-star star4"><img src="images/details/star-k.png" alt="star"></li>
+						<li class="set-star star5"><img src="images/details/star-k.png" alt="star"></li> -->
+					</ul>
+					<div class="comment-user">
+						<div class="user-logo">
+							<img src="images/details/users-2.png" alt="">
+							<p class="user-logo-p">E29****329</p>
+						</div>
+						<div class="comment-box-right">
+							<ul class="user-comment">
+								<li class="user-comment-1">行程安排：满意</li>
+								<li class="user-comment-int">|</li>
+								<li>住宿餐食：满意</li>
+								<li class="user-comment-int">|</li>
+								<li>旅行交通：满意</li>
+								<li class="user-comment-int">|</li>
+								<li class="user-comment-pos">综合评价：
+									<ul class="user-comment-star">
+										<li><img src="images/details/star.png" alt="star"></li>
+										<li><img src="images/details/star.png" alt="star"></li>
+										<li><img src="images/details/star.png" alt="star"></li>
+										<li><img src="images/details/star.png" alt="star"></li>
+										<li><img src="images/details/star.png" alt="star"></li>
+									</ul>
+								</li>
+							</ul>
+							<p class="user-comment-text">18号就结束行程了，现在才来评价，总的来说还是不错的。</p>
+							<div class="user-img">
+								<img src="images/details/user-img-4.jpg" alt="">
+								<img src="images/details/user-img-5.jpg" alt="">
+							</div>
+							<p class="user-comment-form">2015-12-22 14:12 来自：爱自驾电脑版</p>
+						</div>
+					</div>
+
+					<div class="comment-user">
+						<div class="user-logo">
+							<img src="images/details/users-2.png" alt="">
+							<p class="user-logo-p">E29****329</p>
+						</div>
+						<div class="comment-box-right">
+							<ul class="user-comment">
+								<li class="user-comment-1">行程安排：满意</li>
+								<li class="user-comment-int">|</li>
+								<li>住宿餐食：满意</li>
+								<li class="user-comment-int">|</li>
+								<li>旅行交通：满意</li>
+								<li class="user-comment-int">|</li>
+								<li class="user-comment-pos">综合评价：
+									<ul class="user-comment-star">
+										<li><img src="images/details/star.png" alt="star"></li>
+										<li><img src="images/details/star.png" alt="star"></li>
+										<li><img src="images/details/star.png" alt="star"></li>
+										<li><img src="images/details/star.png" alt="star"></li>
+										<li><img src="images/details/star.png" alt="star"></li>
+									</ul>
+								</li>
+							</ul>
+							<p class="user-comment-text">总体评论给90分！双十一活动的时候定的，价格很便宜，还会担心会不会住宿太偏僻。结果还好，第一天在水原这个地方，房间是公寓。周围很多小商店和酒吧，可以不用非要在第一天行程的汗蒸那里吃饭，这点给大家点建议，后三晚在加阳的怀旧酒店。还可以了，相对于这个价格不用太刻意挑剔。周围吃饭的非常方便。去明洞和北屋打车都要10000-14000的价钱。周围有地铁，我们基本是早晨地铁出，晚上打车回。</p>
+							<ul class="user-comment-text-list">
+								<li class="user-comment-text-list-1">行程安排：</li>
+									<ul class="user-comment-text-list-2">
+										<li>行程安排总体满意，第二天的购物关键的重点在于华克山庄，只有60分钟，那里虽然小 折扣真的便宜。娇韵诗免税基础又七折。我们基本是靠抢的回来，时间太紧张。乐天和新罗其实在网上买更方便 省的大包小包的拎着。直接去机场取，还有积分抵现使用。我订了1500人民币的东西，抵掉400多。乐天世界很好玩，可惜时间段。保存体力到最后再战斗，才是王道。</li>
+									</ul>
+								<li class="user-comment-text-list-1">住宿餐食：</li>
+									<ul class="user-comment-text-list-2">
+										<li>住宿第一天在水原（偏僻些），后三天在加阳怀旧酒店。周围有地铁加阳站，打车到明洞一万多点。还可以。周围吃饭的多，很方便。</li>
+									</ul>
+								<li class="user-comment-text-list-1">旅行交通：</li>
+									<ul class="user-comment-text-list-2">
+										<li>交通基本我们是早晨地铁出 晚上打车回。首尔打车还可以把，不太堵。</li>
+									</ul>
+							</ul>
+
+							<div class="user-img">
+								<img src="images/details/user-img-4.jpg" alt="">
+								<img src="images/details/user-img-5.jpg" alt="">
+							</div>
+							<p class="user-comment-form">2015-12-22 14:12 来自：爱自驾电脑版</p>
+							<div class="other-comment">
+								<h2 class="other-comment-server">爱自驾客服回复：</h2>
+								<p class="other-comment-info">尊敬的爱自驾会员，给你立减400这个订单之后，此特惠房型实际您成功预订的此客栈只收了您75元/晚，您可以仔细对比下的，感谢您对爱自驾网的关注与支持，欢迎您下次预订4007-999-999，谢谢！祝您愉快！</p>
+								<p class="other-comment-time">(2015-12-11 13:23:56)</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="comment-user">
+						<div class="user-logo">
+							<img src="images/details/users-1.png" alt="">
+							<p class="user-logo-p">E29****329</p>
+						</div>
+						<div class="comment-box-right">
+							<ul class="user-comment">
+								<li class="user-comment-1">行程安排：满意</li>
+								<li class="user-comment-int">|</li>
+								<li>住宿餐食：满意</li>
+								<li class="user-comment-int">|</li>
+								<li>旅行交通：满意</li>
+								<li class="user-comment-int">|</li>
+								<li class="user-comment-pos">综合评价：
+									<ul class="user-comment-star">
+										<li><img src="images/details/star.png" alt="star"></li>
+										<li><img src="images/details/star.png" alt="star"></li>
+										<li><img src="images/details/star.png" alt="star"></li>
+										<li><img src="images/details/star.png" alt="star"></li>
+										<li><img src="images/details/star.png" alt="star"></li>
+									</ul>
+								</li>
+							</ul>
+							<p class="user-comment-text">18号就结束行程了，现在才来评价，总的来说还是不错的。</p>
+							<ul class="user-comment-text-list">
+								<li class="user-comment-text-list-1">行程安排：</li>
+									<ul class="user-comment-text-list-2">
+										<li>很好</li>
+									</ul>
+								<li class="user-comment-text-list-1">住宿餐食：</li>
+									<ul class="user-comment-text-list-2">
+										<li>很好</li>
+									</ul>
+								<li class="user-comment-text-list-1">旅行交通：</li>
+									<ul class="user-comment-text-list-2">
+										<li>很好</li>
+									</ul>
+							</ul>
+							<div class="user-img">
+								<img src="images/details/user-img-4.jpg" alt="">
+								<img src="images/details/user-img-5.jpg" alt="">
+							</div>
+							<p class="user-comment-form">2015-12-22 14:12 来自：爱自驾电脑版</p>
+						</div>
+					</div>
+					<div class="page-more">
+						<span><a class="page-more-btn" href="">查看全部点评&gt;&gt;</a></span>
+						<div class="page-btn-box">
+							<ul class="page-list-ul">
+								<li class="page-ul-li page-ul-next">上一页</li>
+								<li class="page-ul-li page-ul-num">1</li>
+								<li class="page-ul-li page-ul-num">2</li>
+								<li class="page-ul-li page-ul-num">3</li>
+								<li class="page-ul-li page-ul-num">4</li>
+								<li class="page-ul-li page-ul-next">下一页</li>
+							</ul>
+							<span class="page-text">到</span>
+							<input class="page-input" type="text">
+							<span class="page-page">页</span>
+							<span class="page-text"><input class="page-text-btn" type="button" value="确定"></span>
+						</div>
+					</div>
+
+
 				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -347,7 +584,10 @@
 					<p class="date-list date-six">第六天<span class="date-radius-sm"></span></p>
 				</div>
 			</div>
-			<div class=""></div>
+			<div class="center-comment">
+
+
+			</div>
 		</div>
 	</div>
 
@@ -373,20 +613,141 @@
 	</div>
 
 
+<!-- 模态框 -->
+
+	<!-- Button to trigger modal -->
+	<div class="modal fade" id="myModal">
+  		<div class="modal-dialog modal-dialog-width">
+    		<div class="modal-content">
+      			<div class="modal-header">
+      				<button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+      				<div class="modal-header-in">
+      					<img src="images/login-logo.gif" alt="">
+      				</div>
+
+     			  </div>
+            <div class="modal-body">
+            	<div class="modal-body-in">
+                <a href="#" data-toggle="modal" data-target="#VipLogin" data-dismiss="modal">会员登录</a>
+            		<input type="text" class="modal-body-input" placeholder="&nbsp;&nbsp;邮箱/手机/用户名">
+            		<input type="password" class="modal-body-input" placeholder="&nbsp;&nbsp;密码">
+            		<button type="button" class="btn btn-primary btn-login" data-dismiss="modal">登陆</button>
+            		<a href="#">忘记密码</a>
+            		<span class="free-signin">还没有账号？<a href="#" data-toggle="modal" data-target="#signIn" data-dismiss="modal">免费注册</a></span>
+                <div class="clear"></div>
+            		<div class="modal-footer-in">
+            			<div class="modal-footer-in-span"><span class="otherway-login">其他报名方式</span></div>
+            			<br>
+            			<button type="button" class="btn btn-primary not-login"  data-dismiss="modal">不登录，直接报名></button>
+            		</div>
+              </div>
+          </div>
+    		</div><!-- /.modal-content -->
+  		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+  <div class="modal fade" id="signIn">
+    <div class="modal-dialog modal-dialog-width">
+      <div class="modal-content modal-content-signIn">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+          <div class="modal-header-in">
+            <img src="images/login-logo.gif" alt="爱自驾">
+          </div>
+        </div>
+        <div class="modal-body modal-body-signIn">
+          <a href="#" class="modal-body-signIn-byPhone">用手机注册</a>
+          <div class="clear"></div>
+          <input type="text" class="modal-body-signIn-input" placeholder="&nbsp;&nbsp;请输入邮箱">
+          <input type="password" class="modal-body-signIn-input" placeholder="&nbsp;&nbsp;密码">
+          <input type="password" class="modal-body-signIn-input" placeholder="&nbsp;&nbsp;设置密码">
+          <input type="password" class="modal-body-signIn-input" placeholder="&nbsp;&nbsp;输入密码">
+          <input type="text" class="modal-body-signIn-input" placeholder="&nbsp;&nbsp;输入邀请码，可不填">
+          <div class="modal-body-signIn-agreement">
+            <span>注册视为同意<a href="#">《爱自驾用户使用协议》</a></span>
+            <button type="button" class="btn btn-primary not-login"  data-dismiss="modal">注册</button>
+          </div>
+          <div class="modal-footer-in">
+            <div class="modal-footer-in-span"><span class="otherway-login">其他报名方式</span></div>
+            <br>
+            <button type="button" class="btn btn-primary not-login"  data-dismiss="modal">不登录，直接报名></button>
+          </div>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+
+  <div class="modal fade" id="VipLogin">
+    <div class="modal-dialog modal-dialog-Vip-width">
+      <div class="modal-content modal-content-Vip">
+        <div class="modal-left">
+          <div class="modal-left-header">
+            <span>会员登陆</span>
+          </div>
+          <div class="modal-left-contant">
+            <div class="modal-left-contant-sign">
+              <div class="modal-left-contant-sign-name">
+                <span>会员名：</span>
+              </div>
+              <div class="modal-left-contant-sign-password">
+                <span>登陆密码：</span>
+              </div>
+              <div class="modal-left-contant-sign-match">
+                <span>验证码：</span>
+              </div>
+            </div>
+            <div class="modal-left-contant-input">
+              <input type="text" class="modal-left-contant-input-name">
+              <input type="password" class="modal-left-contant-input-password">
+              <div class="modal-left-contant-input-match">
+                <span>点击显示</span>
+              </div>
+            </div>
+          </div>
+          <div class="modal-left-footer">
+            <input type="checkbox" class="modal-left-footer-checkbox">
+            <div class="modal-left-footer-checkbox-ex">
+              <span>两周内自动登陆</span>
+              <a href="#">忘记密码？</a>
+            </div>
+            <div class="clear"></div>
+            <div class="modal-left-footer-login">
+              <a href="#" data-toggle="modal" data-target="#signIn" data-dismiss="modal">没有用户名？立即注册！</a>
+              <button type="button" class="btn btn-primary"  data-dismiss="modal">立即登录</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-right">
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+          <div class="modal-right-contant">
+            <span>非会员预定</span>
+            <button type="button" class="btn btn-primary"  data-dismiss="modal">不登录，直接预定></button>
+          </div>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+	<script type="text/javascript" src="modal/js/modal.js"></script>
+	<script type="text/javascript">
+		$('#myModal').on('shown.bs.modal',function(){
+				// $('#myInput').focus()
+		});
+    $('#signIn').on('shown.bs.modal',function(){
+        // $('#myInput').focus()
+    });
+
+	</script>
 
 
 
 
-
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.js"></script>
+<script src="script/details/details.js"></script>
 <script src="js/city-picker.data.js"></script>
 <script src="js/city-picker.js"></script>
-<script src="js/main.js"></script>
-
-<script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="js/city-data.js"></script>
 <script type="text/javascript" src="js/hzw-city-picker.min.js"></script>
+<script type="text/javascript" src="js/star.js"></script>
 <script>
 	var cityPicker = new HzwCityPicker({
 		data: data,
@@ -404,8 +765,25 @@
 			alert('OK');
 		}
 	});
-</script>
+	cityPicker.init();
 
-cityPicker.init();
+	// 百度地图API功能
+	var map = new BMap.Map("bdMapBox");
+	var nowCity = new BMap.LocalCity();
+	var goCity = $(".form-control");
+	nowCity.get(bdGetPosition);
+	function bdGetPosition(result){
+		var cityName = result.name; //当前的城市名
+		/*自定义代码*/
+		atCity.innerHTML = cityName;
+		// goCity.nodeValue = cityName;
+		$(".form-control").val(cityName);
+		console.log(goCity);
+		/*自定义代码*/
+	}
+</script>
 </body>
 </html>
+<!-- <input class="form-control text-style" readonly type="text" value="" data-toggle="city-picker"> -->
+
+                    <!-- (placeholder ? '<span class="placeholder">' + placeholder + '</span>' : '') + -->

@@ -1378,7 +1378,7 @@ a.text-danger:focus {
 }
 a.bg-primary:hover,
 a.bg-primary:focus {
-  background-color: #286090;
+  background-color: #50bbdb;
 }
 .bg-success {
   background-color: #dff0d8;
@@ -3134,7 +3134,7 @@ fieldset[disabled] .btn-default.active {
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #286090;
+  background-color: #50bbdb;
   border-color: #204d74;
 }
 .btn-primary:active,
@@ -6798,3 +6798,259 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+.modal-header-in{
+  height: 60px;
+  width: 170px;
+  margin: 0 auto;
+}
+.modal-content{
+  height: 522px;
+  width: 500px;
+}
+.modal-header{
+  border-bottom: none;
+}
+.modal-footer{
+  border-top: none;
+}
+.modal-body-input{
+  height: 53px;
+  width: 353px;
+  font-size: 14px;
+}
+.modal-body-in{
+  height: 262px;
+  width: 385px;
+  margin: 0 auto;
+  padding: 15px;
+  color: #333;
+}
+.modal-body-input{
+  margin-bottom: 16px;
+}
+.btn-login{
+  height: 50px;
+  width: 353px;
+  font-size: 24px;
+  background-color: #50bbdb;
+  border: #50bbdb;
+  margin-bottom: 20px;
+}
+.free-signin{
+  float: right;
+}
+.not-login{
+  background-color: #50bbdb;
+  border: #50bbdb;
+}
+.otherway-login{
+  margin-left: 136px;
+  margin-top: 40px;
+  font-size: 13px;
+  text-align: center;
+}
+.modal-footer-in{
+  height: 87px;
+  margin-top: 40px;
+}
+.modal-footer-in-span{
+  background-image: url(../images/login-bg.gif);
+  width: 352px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #a1a1a1;
+}
+.modal-footer-in button{
+  display: block;
+  margin: 0 auto;
+}
+.clear{
+  clear: both;
+}
+.modal-content-signIn{
+  height: 670px;
+  width: 500px;
+}
+.modal-body-signIn{
+  height: 532px;
+  width: 355px;
+  margin: 0 auto;
+  padding: 0px;
+}
+.modal-body-signIn-input{
+  width: 353px;
+  height: 53px;
+  margin-top: 12px;
+}
+.modal-body-signIn-byPhone{
+  float: right;
+  color: #50bbdb;
+}
+.modal-body-signIn-agreement{
+  width: 353px;
+  height: 40px;
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 40px;
+}
+.modal-body-signIn-agreement span{
+  color: #999;
+}
+.modal-body-signIn-agreement span a{
+  color: #6e6e6e;
+}
+.modal-dialog-width{
+  width: 500px;
+}
+.modal-dialog-Vip-width{
+  width: 1000px;
+  height: 520px;
+}
+.modal-content-Vip{
+  width: 1000px;
+  height: 520px;
+  padding: 13px 30px;
+}
+.modal-left{
+  width: 468px;
+  height: 484px;
+  border-right: 1px solid #000;
+  float: left;
+}
+.modal-right{
+  width: 470px;
+  height: 484px;
+  float: left;
+}
+.modal-left-header{
+  width: 425px;
+  height: 53px;
+  border-bottom: 1px #ababab dashed;
+  line-height: 53px;
+  font-size: 20px;
+}
+.modal-left-contant{
+  height: 181px;
+  width: 235px;
+  padding-top:14px;
+  padding-bottom: 14px;
+}
+.modal-left-contant-sign{
+  height: 180px;
+  width: 106px;
+  float: left;
+}
+.modal-left-contant-sign-name{
+  width: 106px;
+  height: 35px;
+}
+.modal-left-contant-sign-name span{
+  margin-top: 5px;
+  font-size: 18px;
+}
+.modal-left-contant-sign-password{
+  width: 106px;
+  height: 35px;
+  margin-top: 24px;
+}
+.modal-left-contant-sign-password span{
+  margin-top: 5px;
+  font-size: 18px;
+}
+.modal-left-contant-sign-match{
+  width: 106px;
+  height: 35px;
+  margin-top: 24px;
+}
+.modal-left-contant-sign-match span{
+  margin-top: 5px;
+  font-size: 18px;
+}
+.modal-left-contant-input{
+  height: 180px;
+  width: 129px;
+  float: left;
+}
+.modal-left-contant-input-name{
+  height: 33px;
+  width: 127px;
+  border-color: #ccc;
+}
+.modal-left-contant-input-password{
+  height: 33px;
+  width: 127px;
+  margin-top: 24px;
+  border-color: #ccc;
+}
+.modal-left-contant-input-match{
+  height: 33px;
+  width: 90px;
+  margin-top: 24px;
+  border: 1px solid #ccc;
+  line-height: 33px;
+  text-align: center;
+}
+.modal-left-contant-input-match span{
+  font-size: 16px;
+}
+.modal-left-footer{
+  width: 468px;
+  height: 249px;
+  padding: 19px 105px;
+  line-height: 12px;
+}
+.modal-left-footer-checkbox-ex{
+  font-size: 12px;
+}
+.modal-left-footer-checkbox{
+  float: left;
+}
+.modal-left-footer-checkbox-ex{
+  width: 196px;
+  height: 13px;
+  float: left;
+  margin-top: 4px;
+  padding-left: 4px;
+}
+.modal-left-footer-checkbox-ex a{
+  font-size: 12px;
+  float: right;
+}
+.modal-left-footer-checkbox-ex span{
+  font-size: 12px;
+  float: left;
+}
+.modal-left-footer-login{
+  height: 90px;
+  width: 318px;
+  margin-top: 20px;
+}
+.modal-left-footer-login a{
+  font-size: 12px;
+}
+.modal-left-footer-login button{
+  font-size: 18px;
+  margin-top: 33px;
+  display: block;
+}
+.modal-right-contant{
+  height: 108px;
+  width: 173px;
+  margin-left: 140px;
+  margin-top: 140px;
+  text-align: center;
+}
+.modal-right-contant span{
+  font-size: 20px;
+  color: #000;
+
+}
+.modal-right-contant button{
+  font-size: 18px;
+  margin-top: 46px;
+}
+#btnId{
+    margin-top: -10px;
+    background-color: #244d5f;
+    border-color:#244d5f;
+}

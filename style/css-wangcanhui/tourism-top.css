@@ -38,7 +38,7 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../fonts/msyhbd.ttf);
 	font-size: 16px;
 }
 #top .top-nav ul{
-	float: left;
+	/*float: left;*/
 	list-style: none;
 	height: 20px;
 }
@@ -146,14 +146,11 @@ font-family: MicrosoftYaHei-Regular-bd;src:url(../fonts/msyhbd.ttf);
 
 
 
-
-
 #footer{
-	margin:58px;
-	min-width: 1000px;
 	background-color: #444b55;
 	height: 50px;
 	font-family: MicrosoftYaHei-Regular;
+	margin-top:60px;
 }
 #footer .footer-list ul{
 	width: 1000px;

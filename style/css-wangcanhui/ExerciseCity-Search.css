@@ -1,72 +1,43 @@
-#myModal{
-	width: 500px;
-	height: 1000px;
-	margin-left: 500px;
+
+#switch .modal-content{
+	width:710px;
+	height:220px;
+	position:relative;
+	top:15px;
+	right:200px;
+	color: #50bbdb;
+	font-size: 15px;
+	font-family: "微软雅黑";
+	color: #5c5c5c;
 }
-.motai-logo{
-	margin-left: 140px;
-	margin-top: 10px;
+.country{
+	text-align: center;
+	width:80px;
+	height:220px;
+	float:left;
 }
-.motai-p{
-	float: right;
-	margin-right: 50px;
-	margin-top: 80px;
+.country p{
+	padding-top: 20px;
+	font-size:18px;
 }
-.motai-input{
-	height: 55px;
-	width: 353px;
-	margin-left: 55px;
-	margin-top: 15px;
+.city{
+	color:#50b8d8;
+	width:700px;
+	height:200px;
 }
-.motai-denglu{
-	position: relative;top: 15px;
-	left: 55px;
-	height: 48px;
-	width: 353px;
+.city li {
+	list-style: none;
+	width:77.5px;
+	height:50px;
+	float:left;
+	text-align: center;
+	line-height: 50px;
 }
-.motai-denglu-go{
-	font-size: 24px;
-}
-.motai-font1{
-	position: relative;top: 30px;left: 55px;
-}
-.motai-font2{
-	position: relative;left: 265px;
-}
-.motai-font3{
-	position: relative;left: 350px;
-	top: -30px;
-}
-.motai-font4{
-	margin-left: 190px;
-	margin-top: -12px;
-}
-.motai-hengxian{
-	height: 3px;
-	width: 134px;
-	background-color: #50bbdb;
-}
-.hengxian1{
-	margin-left: 55px;margin-top:20px;
-}
-.hengxian2{
-	margin-left: 277px;margin-top:-22px;
-}
-.motai-false{
-	margin-left: 140px;
-	margin-top: -60px;
-}
-.motai-straight{
-	margin-top: 15px;
-	float: left;
-	margin-left: 120px;
-	width: 233px;
-	height: 44px;
-}
-.motai-straight-p{
-	font-size: 18px;
-	font-family: MicrosoftYaHei-Regular;
-}
+
+
+
+
+
 
 .banner{
 	margin-top: 21px;
@@ -229,9 +200,9 @@
 	height:55px;
 	border:1px solid #cccccc;
 }
-.banner-bottom a :hover{
+/*.banner-bottom a :hover{
 	cursor:pointer; 
-}
+}*/
 .banner-bottom a{
 	color:#999999;
 }
@@ -239,6 +210,9 @@
 	float:left;
 	width:370px;
 	height:55px;
+}
+.banner-bottom .attr li :hover{
+	cursor:pointer;
 }
 .banner-bottom li{
 	font-size: 14px;
@@ -284,6 +258,9 @@
 	margin:auto 0;
 	height:28px;
 	width:90px;
+}
+.banner-bottom .li7 img :hover{
+	cursor:pointer;
 }
 .content{
 	margin:0 auto;
@@ -447,6 +424,7 @@
 	float:left;
 	margin-left: 11px;
 	background-color: #d6d6d6;
+	color:#525252;
 }
 .contain ul li:hover{
 	cursor: pointer;

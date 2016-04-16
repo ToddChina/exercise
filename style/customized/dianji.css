@@ -1,0 +1,58 @@
+/*a标签的字体颜色灰色*/
+.bg-blue{
+	background-color: #50bbdb;
+}
+.bg-white{
+	background-color: #fff;
+}
+/*表单验证*/
+.DisPaly{
+	display: none;
+}
+#city-add-box{
+	width: 706px;
+	height: 105px;
+	border-radius: 10px;
+	background-color: #fff;
+	-webkit-box-shadow:0 0 10px #0CC;
+	-moz-box-shadow:0 0 10px #0CC;
+	box-shadow:0 0 10px #0CC;
+	z-index: 9999;
+	position: absolute;
+	top: 40px;
+	left: 450px;
+}
+#city-add-box p{
+	font-size: 15px;
+	font-family:"微软雅黑";
+	margin-top: 10px;
+	margin-left: 30px;
+	display: block;
+	width: 50px;
+	float: left;
+}
+#city-list-1{
+	float: left;
+	width: 600px;
+	height: 100px;
+	margin-top: 10px;
+}
+#city-list-1 .city-list-add{
+	float: left;
+	position: relative;
+	font-size: 15px;
+	font-family:"微软雅黑";
+	color: #50B8D8;
+	display: block;
+	height:22px;
+	line-height: 22px;
+	width: 66px;
+	text-align: center;
+	cursor: pointer;
+}
+#city-list-1 .city-list-add:hover{
+	background-color: #e6fbfd;
+}
+#top .top-box .top-nav .nav-list-2 .list-1 img:hover{
+	color: #0f0;
+}
